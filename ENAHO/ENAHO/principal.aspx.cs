@@ -13,5 +13,17 @@ namespace ENAHO
         {
 
         }
+
+        protected void rb_mismo_prespuesto_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_mismo_prespuesto.Text.ToString() == "NO")
+            {
+                
+                // mostrar campo para cantidad de hogares
+            }
+            else {
+                // ocultar campo para cantidad de hogares
+            }
+        }
     }
 }
