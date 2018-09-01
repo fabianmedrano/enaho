@@ -1,0 +1,29 @@
+﻿
+.center-block {
+    float: none;
+    margin-top:150px;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.panel {
+    border:none;
+}
+
+.panel-heading {
+    background-color: none;
+}
+
+.btn {
+    margin-top:10px;
+
+
+}
+
+.mensaje {
+    margin-top: 20px;
+    width: 100%;
+
+}

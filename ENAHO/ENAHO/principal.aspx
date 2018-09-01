@@ -82,7 +82,7 @@
                             </div><!-- numero de personas vivienda-->
                              <div class=" row">
                                 <label class="control-label col-md-5">Comparten mismo presupuesto:</label>
-                                 <asp:RadioButtonList runat="server" ID="rb_mismo_prespuesto"  CssClass="col-md-7 right" OnCheckedChanged="rb_mismo_prespuesto_CheckedChanged" AutoPostBack="True">
+                                 <asp:RadioButtonList runat="server" ID="rb_mismo_prespuesto"  CssClass="col-md-7 right" AutoPostBack="True">
                                     <asp:ListItem Text="Si" Value="SI" />
                                     <asp:ListItem Text="No" Value="NO" />
                                 </asp:RadioButtonList>
