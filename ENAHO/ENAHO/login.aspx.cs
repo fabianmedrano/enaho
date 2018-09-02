@@ -19,50 +19,51 @@ namespace ENAHO
 
         protected void bt_login_Click(object sender, EventArgs e)
         {
-
-            if (true) {
-
+            try {
+                if (string.IsNullOrEmpty(tb_usuario.Text) || string.IsNullOrEmpty(tb_pass.Text)) {
+                    l_login.Text = "Debe ingresar datos";
+                    l_login.Visible = true;
+                }
+                else {
+                    if (ValidarUsuario(tb_usuario.Text.ToString(), tb_pass.Text.ToString())) {
+                        Response.Redirect("principal.aspx");
+                    } else {
+                        l_login.Text = "Error en los datos";
+                        l_login.Visible = true;
+                    }
+                }
+            }catch (Exception ex) {
+                Console.WriteLine(ex.ToString());
             }
-            else {
-                /// l_login.Visible = true;
-            }
-            l_login.Visible = true;
         }
 
 
-        public void ValidarUsuario(string clave, string nombre)
+        public Boolean ValidarUsuario(string usuario, string pass)
         {
+            Boolean encontrado = false;
             SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
-            try
-            {
+            try {
                 command.CommandText = "p_login";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Clear();
-                command.Parameters.Add(new SqlParameter("@nombreEmpleado", nombre)
-                );
-                command.Parameters.Add(new SqlParameter("@Clave", clave));
+                command.Parameters.Add(new SqlParameter("@user", usuario));
+                command.Parameters.Add(new SqlParameter("@pass", pass));
                 command.Connection.Open();
                 SqlDataReader RESULTADO = ((SqlDataReader)command.ExecuteReader());
-                if (RESULTADO.Read())
-                {
-                   
-                   Convert.ToInt16(RESULTADO["IdEmpleado"]);
-          RESULTADO["NombreEmpleado "].ToString();
+                if (RESULTADO.Read()) {
+                    encontrado = true;
+//
                 }
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 throw ex;
-            }
-            finally
-            {
-                if (command.Connection.State ==
-                System.Data.ConnectionState.Open)
-                {
+            } finally {
+                if (command.Connection.State ==  System.Data.ConnectionState.Open) {
                     command.Connection.Close();
                 }
                 command.Dispose();
             }
+            return encontrado;
         }
     }
 }

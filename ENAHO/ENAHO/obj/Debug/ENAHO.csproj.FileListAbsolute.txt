@@ -71,3 +71,5 @@ C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.csproj.CoreCompi
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.csproj.CopyComplete
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.pdb
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Datos.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Datos.pdb

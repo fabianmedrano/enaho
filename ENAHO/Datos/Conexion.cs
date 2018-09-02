@@ -11,7 +11,7 @@ namespace Datos
     {
         public static SqlConnection GET_CONEXION()
         {
-         return new  SqlConnection(String.Format(@"Server=FABIÁN-INSPIRON ; Database = ENAHO ; User  Id = sa ; Password = 123;"));
+         return new  SqlConnection(String.Format(@"Server=localhost ; Database = ENAHO ; user id = sa ; Password = 123;"));
         }
     }
 }
