@@ -1,8 +1,7 @@
 ﻿body {
-    background-color:aquamarine;
+   
     margin-top:20px;
 }
-
 
 .center-block {
     float: none;
@@ -17,4 +16,10 @@
 
 .left {
     float:left;
+}
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #286090;
+    color: white;
 }

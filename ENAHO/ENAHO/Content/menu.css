@@ -1,0 +1,137 @@
+﻿/*body {
+    font-family:'Comic Sans MS';
+    
+}
+.bg-dark {
+    background-color: #286090;
+}
+/*
+.navbar {
+      border-radius:0px;
+    margin-top:0%;
+    margin-left:0px;
+    margin-right:0px;
+}
+.a {
+    font-size:14px;
+    float:none;
+}
+
+.nav-item {
+    margin:3px;
+    padding-right:5px;
+}
+
+ul, li, a {
+    list-style: none;
+    color: white;
+
+}
+
+
+a:hover + a:active {
+    color: seagreen;
+}
+
+
+.center-blonk {
+    float:none;
+}
+.container {
+    margin:10%;
+  margin-top:20%;
+    margin-bottom:20%;
+    margin-left:20%;
+    margin-right:20%;
+}
+
+elemento {
+}
+
+.container {
+    max-width: 1140px;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.container {
+    max-width: 720px;
+}
+
+.container {
+    max-width: 540px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+*/
+
+.container {
+    float: none;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+.opciones {
+    height: 225px;
+    width: 100%;
+    display: block;
+    background-color: #286090;
+    color: white;
+    background-image: initial;
+    background-repeat: initial;
+    background-position: initial;
+    -webkit-border-radius: initial;
+    -moz-border-radius: initial;
+    border-radius: initial;
+    border-style: initial;
+    border-width: initial;
+    border-color: initial;
+}
+
+.botonimagen {
+    background-image: url(fonts/contorno-de-casa.png);
+    background-repeat: no-repeat;
+
+    background-position: center;
+}
+
+.center-block {
+    float:none;
+}
+
+.contenedor-opciones {
+    margin-left:45%;
+    margin-right:45%;
+    padding-top:35%;
+
+    float:none;  
+}
+
+
+a:link {
+    color: white;
+    text-decoration: none
+}
+
+a:visited {
+    color: white;
+    text-decoration: none
+}
+
+a:hover {
+    color: white;
+    text-decoration: none
+}
+
+.glyphicon {
+    font-size: 50px;
+}

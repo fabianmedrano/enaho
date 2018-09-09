@@ -11,19 +11,20 @@ namespace ENAHO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+              /*  row_especificar_tipo_vivienda.Visible = false;
+                row_numero_hogares_vivienda.Visible = false;*/
+            }
 
         }
 
         protected void rb_mismo_prespuesto_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_mismo_prespuesto.Text.ToString() == "NO")
-            {
-                
-                // mostrar campo para cantidad de hogares
-            }
-            else {
-                // ocultar campo para cantidad de hogares
-            }
+        }
+
+        protected void rb_tipo_vivienda_SelectedIndexChanged(object sender, EventArgs e)
+        {   
         }
     }
 }

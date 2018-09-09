@@ -21,12 +21,13 @@ namespace ENAHO
         {
             try {
                 if (string.IsNullOrEmpty(tb_usuario.Text) || string.IsNullOrEmpty(tb_pass.Text)) {
-                    l_login.Text = "Debe ingresar datos";
+                    l_login.Text = "Debe ingresar todos datos";
                     l_login.Visible = true;
                 }
                 else {
                     if (ValidarUsuario(tb_usuario.Text.ToString(), tb_pass.Text.ToString())) {
-                        Response.Redirect("principal.aspx");
+                        Session["Login"] = tb_usuario.Text.ToString();
+                        Response.Redirect("menu.aspx");
                     } else {
                         l_login.Text = "Error en los datos";
                         l_login.Visible = true;
@@ -40,6 +41,7 @@ namespace ENAHO
 
         public Boolean ValidarUsuario(string usuario, string pass)
         {
+
             Boolean encontrado = false;
             SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
             try {

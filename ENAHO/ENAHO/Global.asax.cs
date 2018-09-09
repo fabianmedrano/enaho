@@ -13,9 +13,14 @@ namespace ENAHO
     {
         void Application_Start(object sender, EventArgs e)
         {
-            // Código que se ejecuta al iniciar la aplicación
+
+            Application["App"] = "";
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+        void Session_Start(object sender, EventArgs e)
+        {
+            Session["Login"] = "por defecto";
         }
     }
 }
