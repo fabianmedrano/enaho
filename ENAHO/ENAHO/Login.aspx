@@ -36,13 +36,15 @@
                             </div>
                             <div class="row">
                                 <asp:Button ID="bt_login" runat="server" Text="Entrar" CssClass="btn btn-primary  btn-block" OnClick="bt_login_Click" OnClientClick="btn_entrar" />
-                            </div>
-                            <div class="row mensaje">
-                                <asp:Label ID="l_login" runat="server" CssClass="alert alert-danger text-center ">Datos incorrectos</asp:Label>
-                                
-                            </div>                          
+                            </div>                   
                         </div>
-                    </div>
+                  
+                </div>
+                <div class=" panel-footer">
+                          <div class="row mensaje">
+                                <asp:Label ID="l_login" runat="server" CssClass="alert alert-danger text-center ">Datos incorrectos</asp:Label> 
+                        </div> 
+                </div>
             </div>
         </div>
     </form>

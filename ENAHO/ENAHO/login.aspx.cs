@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using Datos;
+using Entidad;
 
 namespace ENAHO
 {
@@ -26,7 +27,7 @@ namespace ENAHO
                 }
                 else {
                     if (ValidarUsuario(tb_usuario.Text.ToString(), tb_pass.Text.ToString())) {
-                        Session["Login"] = tb_usuario.Text.ToString();
+                        Session["Login"] = new Usuario(tb_usuario.Text.ToString(), tb_pass.Text.ToString()) ;
                         Response.Redirect("menu.aspx");
                     } else {
                         l_login.Text = "Error en los datos";

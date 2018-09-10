@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,7 +21,7 @@ namespace ENAHO
         }
         void Session_Start(object sender, EventArgs e)
         {
-            Session["Login"] = "por defecto";
+            Session["Login"] =  new Usuario();
         }
     }
 }

@@ -73,3 +73,5 @@ C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.pdb
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Datos.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Datos.pdb
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Entidad.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Entidad.pdb

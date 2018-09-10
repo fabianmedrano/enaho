@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,13 +12,27 @@ namespace ENAHO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           // = Session["Login"].ToString();
+            if (string.IsNullOrEmpty((Session["login"] as Usuario).Pass)&& string.IsNullOrEmpty((Session["login"] as Usuario).User)) {
+                Response.Redirect("login.aspx");
+            }
+           // Class1 objClass = (Class1)Session["class"];
+            Console.WriteLine((Session["login"] as Usuario).Pass);
         }
 
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
 
             Response.Redirect("principal.aspx");
+        }
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("usuarios.aspx");
+        }
+
+        protected void Unnamed3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

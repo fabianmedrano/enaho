@@ -20,7 +20,7 @@
                     <div class="col-md-4">
                         <div class="panel panel-default">
                             <!-- user--->
-                            <asp:LinkButton runat="server" CssClass="opciones "  OnClick="Unnamed2_Click">
+                            <asp:LinkButton runat="server" CssClass="opciones " OnClick="Unnamed1_Click" >
                                 <div class="contenedor-opciones">
                                     <div class="row ">
                                         <span aria-hidden="true" class="glyphicon glyphicon-user"></span>
@@ -52,7 +52,7 @@
                     <div class="col-md-4">
                         <div class="panel panel-default">
                              <!-- reportes--->
-                            <asp:LinkButton runat="server" CssClass="opciones "  OnClick="Unnamed2_Click">
+                            <asp:LinkButton runat="server" CssClass="opciones " OnClick="Unnamed3_Click" >
                                 <div class="contenedor-opciones">
                                     <div class="row ">
                                         <span aria-hidden="true" class="glyphicon glyphicon-book"></span>
