@@ -12,10 +12,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <!--
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+               <div class="navbar-text"><label id="Label1" runat="server">Cerrar Sesion</label></div>
 
+              <div class="navbar-text"><label id="usuario" runat="server"></label></div>
+         
+
+               <span aria-hidden="true" class="glyphicon glyphicon-"></span>
+              
+          
+          </div>
+        </nav> 
+        -->
         <div class="container col-md-7">
-        
-
                 <div class="row">
                     <div class="col-md-4">
                         <div class="panel panel-default">

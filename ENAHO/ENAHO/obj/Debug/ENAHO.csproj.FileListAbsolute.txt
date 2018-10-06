@@ -50,6 +50,8 @@ C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\roslyn\VBCSCompiler.exe.conf
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Antlr3.Runtime.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\AspNet.ScriptManager.bootstrap.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Datos.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Entidad.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
@@ -59,6 +61,8 @@ C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Microsoft.Web.Infrastructure
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Newtonsoft.Json.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\System.Web.Optimization.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\WebGrease.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Datos.pdb
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Entidad.pdb
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\System.Web.Optimization.xml
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Newtonsoft.Json.xml
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Antlr3.Runtime.pdb
@@ -71,7 +75,3 @@ C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.csproj.CoreCompi
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.csproj.CopyComplete
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.dll
 C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\obj\Debug\ENAHO.pdb
-C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Datos.dll
-C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Datos.pdb
-C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Entidad.dll
-C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\bin\Entidad.pdb

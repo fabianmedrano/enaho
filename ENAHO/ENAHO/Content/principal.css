@@ -1,6 +1,8 @@
 ﻿body {
- /*   background-color: #337ab7;*/
+    background-color: #337ab7;
     margin-top: 20px;
+    font-family: monospace;
+    /*opacity: 0.5;*/
 }
 
 .center-block {
@@ -21,5 +23,37 @@
 .panel > .panel-heading {
     background-image: none;
     background-color: #286090;
+    border-radius:inherit;
     color: white;
+}
+
+.panel {
+    background-color: none;
+    border-color:#286090;
+    border-radius:initial;
+}
+
+.form-control {
+    border-radius: initial;
+}
+
+.DDL {
+    height:29px;
+}
+
+.box {
+    border-style:solid;
+    border-width:1px;
+    border-color:darkgray;
+    border-collapse:collapse;
+    margin-bottom:0;
+    margin-top:0;
+    padding-bottom:5px;
+    padding-top:5px;
+    height:97px;
+}
+hr {
+    border-style: solid;
+   
+    border-color: darkgray;
 }

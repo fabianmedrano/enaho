@@ -12,22 +12,27 @@ namespace ENAHO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty((Session["login"] as Usuario).Pass)&& string.IsNullOrEmpty((Session["login"] as Usuario).User)) {
+            if (string.IsNullOrEmpty((Session["login"] as Usuario).Pass) && string.IsNullOrEmpty((Session["login"] as Usuario).User))
+            {
                 Response.Redirect("login.aspx");
             }
+            else {
+                usuario.InnerText = (Session["login"] as Usuario).User.ToString()  ;
+              //  usuario.ToString((Session["login"] as Usuario).User.ToString()  );
+            }
            // Class1 objClass = (Class1)Session["class"];
-            Console.WriteLine((Session["login"] as Usuario).Pass);
+          //  Console.WriteLine((Session["login"] as Usuario).Pass);
         }
 
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
-
-            Response.Redirect("principal.aspx");
+            Response.Redirect("principalhogares.aspx");
         }
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("usuarios.aspx");
+            Response.Redirect("principalvivienda.aspx");
+         //   Response.Redirect("usuarios.aspx");
         }
 
         protected void Unnamed3_Click(object sender, EventArgs e)

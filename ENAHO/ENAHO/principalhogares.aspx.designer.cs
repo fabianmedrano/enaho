@@ -10,7 +10,7 @@
 namespace ENAHO {
     
     
-    public partial class principal {
+    public partial class principalhogares {
         
         /// <summary>
         /// Control form.
@@ -22,130 +22,94 @@ namespace ENAHO {
         protected global::System.Web.UI.HtmlControls.HtmlForm form;
         
         /// <summary>
-        /// Control tb_region.
+        /// Control rb_6_aqui_vivienda.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_region;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_6_aqui_vivienda;
         
         /// <summary>
-        /// Control ddl_provincia.
+        /// Control rb_personas_otro_lugar_vivir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_provincia;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_personas_otro_lugar_vivir;
         
         /// <summary>
-        /// Control ddl_canton.
+        /// Control row_numero_personas_otra_vivienda.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_canton;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_numero_personas_otra_vivienda;
         
         /// <summary>
-        /// Control ddl_distrito.
+        /// Control tb_numero_personas_otra_vivienda.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_distrito;
+        protected global::System.Web.UI.WebControls.TextBox tb_numero_personas_otra_vivienda;
         
         /// <summary>
-        /// Control tb_direccion.
+        /// Control rb_personas_viviendo_otra_parte.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_direccion;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_personas_viviendo_otra_parte;
         
         /// <summary>
-        /// Control tb_telefono.
+        /// Control rb_personas_ausentes_menos_6_meses.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_telefono;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_personas_ausentes_menos_6_meses;
         
         /// <summary>
-        /// Control rb_mgch.
+        /// Control row_numero_personas_ausentes_menos_6_meses.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rb_mgch;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_numero_personas_ausentes_menos_6_meses;
         
         /// <summary>
-        /// Control tb_cantidad_personas_vivienda.
+        /// Control tb_personas_ausentes_menos_6_meses.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_cantidad_personas_vivienda;
+        protected global::System.Web.UI.WebControls.TextBox tb_personas_ausentes_menos_6_meses;
         
         /// <summary>
-        /// Control rb_mismo_prespuesto.
+        /// Control Div2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rb_mismo_prespuesto;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div2;
         
         /// <summary>
-        /// Control row_numero_hogares_vivienda.
+        /// Control Div1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_numero_hogares_vivienda;
-        
-        /// <summary>
-        /// Control tb_numero_hogares_vivienda.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_numero_hogares_vivienda;
-        
-        /// <summary>
-        /// Control rb_tipo_vivienda.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rb_tipo_vivienda;
-        
-        /// <summary>
-        /// Control row_especificar_tipo_vivienda.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_especificar_tipo_vivienda;
-        
-        /// <summary>
-        /// Control tb_espeficar_tipo_vivienda.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_espeficar_tipo_vivienda;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
         
         /// <summary>
         /// Control RadioButtonList1.
@@ -157,13 +121,31 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
         
         /// <summary>
-        /// Control Div1.
+        /// Control RadioButtonList2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList2;
+        
+        /// <summary>
+        /// Control row_servico_domestico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_servico_domestico;
+        
+        /// <summary>
+        /// Control tb_servicio_domestico_cuanto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_servicio_domestico_cuanto;
         
         /// <summary>
         /// Control TextBox1.

@@ -128,7 +128,8 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="login.aspx" />
     <Content Include="menu.aspx" />
-    <Content Include="principal.aspx" />
+    <Content Include="principalhogares.aspx" />
+    <Content Include="principalvivienda.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -186,12 +187,19 @@
     <Compile Include="menu.aspx.designer.cs">
       <DependentUpon>menu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="principal.aspx.cs">
-      <DependentUpon>principal.aspx</DependentUpon>
+    <Compile Include="principalhogares.aspx.cs">
+      <DependentUpon>principalhogares.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="principal.aspx.designer.cs">
-      <DependentUpon>principal.aspx</DependentUpon>
+    <Compile Include="principalhogares.aspx.designer.cs">
+      <DependentUpon>principalhogares.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="principalvivienda.aspx.cs">
+      <DependentUpon>principalvivienda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="principalvivienda.aspx.designer.cs">
+      <DependentUpon>principalvivienda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

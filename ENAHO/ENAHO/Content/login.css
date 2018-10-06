@@ -1,6 +1,8 @@
 ﻿body {
     background-color: #337ab7;
+    font-family: monospace;
 }
+
 .center-block {
     float: none;
     margin-top:150px;
@@ -9,37 +11,41 @@
 .form-control {
     width: 100%;
 }
-.control-label {
+
+.panel .panel-heading {
+    font-size: 25px;
+}
+
+
+.control-label, .panel .panel-heading {
     color: white;
 }
-
-.panel {
-    border: none;
-    background-color: #337ab7;
+.panel-footer, .panel .panel-heading, .panel {
+    background-color: inherit;
+    border-color: #337ab7;
 }
 
-    .panel .panel-heading {
-        background-color: none;
-        background-color: #337ab7;
-        color: white;
-        font-size:30px;
-    }
 
-.panel-footer {
-    background-color: none;
-    background-color: #337ab7;
-}
-
-.btn {
-    margin-top: 10px;
-}
 
 .mensaje {
     margin-top: 20px;
     width: 100%;
-
 }
 
-.btn {
-    background-color: #286090;
+.form-control, .mensaje, .bt_login, .panel .panel-heading, .panel, .control-label, .form-control {
+    border-radius: inherit;
+    border-color:none;
+    
+}
+#bt_login {
+    margin-top:30px;
+    background-color: #335c80;
+    border-color: #2469a5;
+    border-radius:initial;
+}
+
+hr {
+    background-color:dimgrey;
+    height: 3px;
+     width:85%;
 }

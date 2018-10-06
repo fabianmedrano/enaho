@@ -31,10 +31,6 @@ ul, li, a {
 }
 
 
-a:hover + a:active {
-    color: seagreen;
-}
-
 
 .center-blonk {
     float:none;
@@ -78,7 +74,7 @@ elemento {
 
 .container {
     float: none;
-    margin-top: 200px;
+    margin-top: 190px;
     margin-bottom: 30px;
 }
 
@@ -99,12 +95,7 @@ elemento {
     border-color: initial;
 }
 
-.botonimagen {
-    background-image: url(fonts/contorno-de-casa.png);
-    background-repeat: no-repeat;
 
-    background-position: center;
-}
 
 .center-block {
     float:none;
@@ -133,7 +124,23 @@ a:hover {
     color: white;
     text-decoration: none
 }
-
+    
 .glyphicon {
     font-size: 50px;
+}
+
+.navbar {
+    border-radius: initial;
+    background-color: none;
+    background-color: #337ab7;
+    border: none;
+    border-bottom: inset;
+    border-width: 1px 20px 1px 20px;
+    /* box-shadow: 0 0 20px #ddd;*/
+    border-color: darkgray;
+}
+
+
+.navbar-text, label {
+    float: right;
 }
