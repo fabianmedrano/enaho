@@ -247,13 +247,13 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_material__predominante_techo;
         
         /// <summary>
-        /// Control RadioButtonList1.
+        /// Control rb_cielo_raso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_cielo_raso;
         
         /// <summary>
         /// Control rb_material__predominante_piso.
@@ -283,40 +283,40 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_material__predominante_piso;
         
         /// <summary>
-        /// Control RadioButtonList2.
+        /// Control rb_sobre_pilotes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList2;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_sobre_pilotes;
         
         /// <summary>
-        /// Control RadioButtonList3.
+        /// Control rb_estado_paredes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList3;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_estado_paredes;
         
         /// <summary>
-        /// Control RadioButtonList4.
+        /// Control rb_estado_techo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList4;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_estado_techo;
         
         /// <summary>
-        /// Control RadioButtonList5.
+        /// Control rb_estado_piso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList5;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_estado_piso;
         
         /// <summary>
         /// Control Div1.
@@ -328,13 +328,13 @@ namespace ENAHO {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
         
         /// <summary>
-        /// Control TextBox2.
+        /// Control tb_cuartos_dormir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox tb_cuartos_dormir;
         
         /// <summary>
         /// Control Div2.
@@ -346,31 +346,31 @@ namespace ENAHO {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div2;
         
         /// <summary>
-        /// Control TextBox3.
+        /// Control tb_aposentos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox tb_aposentos;
         
         /// <summary>
-        /// Control RadioButtonList6.
+        /// Control rb_cantidad_metros.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList6;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_cantidad_metros;
         
         /// <summary>
-        /// Control RadioButtonList7.
+        /// Control rb_abastecimiento_agua.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList7;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_abastecimiento_agua;
         
         /// <summary>
         /// Control rb_origen_agua_consumo.
@@ -553,67 +553,67 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_eliminar_basura;
         
         /// <summary>
-        /// Control RadioButtonList10.
+        /// Control rb_separacion_organica.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList10;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_separacion_organica;
         
         /// <summary>
-        /// Control RadioButtonList11.
+        /// Control rb_separacion_plastico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList11;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_separacion_plastico;
         
         /// <summary>
-        /// Control RadioButtonList12.
+        /// Control rb_separacion_vidrio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList12;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_separacion_vidrio;
         
         /// <summary>
-        /// Control RadioButtonList13.
+        /// Control rb_separacion_alminio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList13;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_separacion_alminio;
         
         /// <summary>
-        /// Control RadioButtonList14.
+        /// Control rb_separacion_papel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList14;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_separacion_papel;
         
         /// <summary>
-        /// Control RadioButtonList15.
+        /// Control rb_separacion_otro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList15;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_separacion_otro;
         
         /// <summary>
-        /// Control RadioButtonList16.
+        /// Control rb_telefono_celular.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList16;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_telefono_celular;
         
         /// <summary>
         /// Control tb_cantidad_telefonos.
@@ -625,238 +625,238 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_cantidad_telefonos;
         
         /// <summary>
-        /// Control RadioButtonList17.
+        /// Control rb_telefono_recidencia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList17;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_telefono_recidencia;
         
         /// <summary>
-        /// Control TextBox4.
+        /// Control tb_telefono_recidencia_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox tb_telefono_recidencia_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList18.
+        /// Control rb_pc_portatil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList18;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_pc_portatil;
         
         /// <summary>
-        /// Control TextBox5.
+        /// Control tb_pc_portatil_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox tb_pc_portatil_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList19.
+        /// Control rb_pc_escritorio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList19;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_pc_escritorio;
         
         /// <summary>
-        /// Control TextBox6.
+        /// Control tb_pc_escritorio_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox tb_pc_escritorio_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList20.
+        /// Control rb_tableta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList20;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_tableta;
         
         /// <summary>
-        /// Control TextBox7.
+        /// Control tb_tableta_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox tb_tableta_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList21.
+        /// Control rb_fax.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList21;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_fax;
         
         /// <summary>
-        /// Control TextBox8.
+        /// Control tb_fax_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox tb_fax_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList22.
+        /// Control rb_radio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList22;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_radio;
         
         /// <summary>
-        /// Control TextBox9.
+        /// Control tb_radio_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox tb_radio_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList23.
+        /// Control rb_carro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList23;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_carro;
         
         /// <summary>
-        /// Control TextBox10.
+        /// Control tb_carro_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox tb_carro_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList24.
+        /// Control rb_moto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList24;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_moto;
         
         /// <summary>
-        /// Control TextBox11.
+        /// Control tb_moto_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox tb_moto_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList25.
+        /// Control rb_tv.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList25;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_tv;
         
         /// <summary>
-        /// Control ss.
+        /// Control tb_tv_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ss;
+        protected global::System.Web.UI.WebControls.TextBox tb_tv_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList26.
+        /// Control rb_tv_convencional.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList26;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_tv_convencional;
         
         /// <summary>
-        /// Control TextBox13.
+        /// Control tb_tv_convencional_cantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox tb_tv_convencional_cantidad;
         
         /// <summary>
-        /// Control RadioButtonList27.
+        /// Control rb_refrigeradora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList27;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_refrigeradora;
         
         /// <summary>
-        /// Control RadioButtonList28.
+        /// Control agua_caliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList28;
+        protected global::System.Web.UI.WebControls.RadioButtonList agua_caliente;
         
         /// <summary>
-        /// Control RadioButtonList29.
+        /// Control rb_tanque_agua.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList29;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_tanque_agua;
         
         /// <summary>
-        /// Control RadioButtonList30.
+        /// Control rb_televisor_cable.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList30;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_televisor_cable;
         
         /// <summary>
-        /// Control RadioButtonList31.
+        /// Control rb_satelital.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList31;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_satelital;
         
         /// <summary>
-        /// Control RadioButtonList32.
+        /// Control rb_otro_tipo_paga.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList32;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_otro_tipo_paga;
         
         /// <summary>
         /// Control Div3.
@@ -868,13 +868,13 @@ namespace ENAHO {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div3;
         
         /// <summary>
-        /// Control TextBox12.
+        /// Control tb_otro_tv_paga.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox tb_otro_tv_paga;
         
         /// <summary>
         /// Control rb_internet.
@@ -886,31 +886,31 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.RadioButtonList rb_internet;
         
         /// <summary>
-        /// Control RadioButtonList33.
+        /// Control rb_tipo_coneccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList33;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_tipo_coneccion;
         
         /// <summary>
-        /// Control Div4.
+        /// Control row_tipo_coneccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div4;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_tipo_coneccion;
         
         /// <summary>
-        /// Control TextBox14.
+        /// Control tb_otro_tipo_coneccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox14;
+        protected global::System.Web.UI.WebControls.TextBox tb_otro_tipo_coneccion;
         
         /// <summary>
         /// Control Div5.
@@ -931,12 +931,12 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox TextBox15;
         
         /// <summary>
-        /// Control RadioButtonList34.
+        /// Control rb_router.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList34;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_router;
     }
 }

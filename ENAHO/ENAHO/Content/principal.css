@@ -13,7 +13,6 @@
 }
 .right {
     float:right;
-    height: 20px;
 }
 
 .left {
@@ -34,6 +33,7 @@
 }
 
 .form-control {
+    height: 20px;
     border-radius: initial;
 }
 
@@ -56,4 +56,15 @@ hr {
     border-style: solid;
    
     border-color: darkgray;
+}
+
+.btn {
+    background-color: #335c80;
+    border-color: #2469a5;
+    border-radius: initial;
+}
+
+.panel .panel-footer {
+    padding-bottom:10px;
+    padding-top:10px;
 }

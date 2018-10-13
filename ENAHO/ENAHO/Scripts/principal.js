@@ -116,5 +116,104 @@
 
         $("#row_eliminar_basura").hide();
     }
+    if ($("#rb_telefono_celular input:checked").val() == "1") {
+
+        $("#tb_cantidad_telefonos").show();
+    } else {
+
+        $("#tb_cantidad_telefonos").hide();
+    }
+    if ($("#rb_telefono_recidencia input:checked").val() == "1") {
+
+        $("#tb_telefono_recidencia_cantidad").show();
+    } else {
+
+        $("#tb_telefono_recidencia_cantidad").hide();
+    }
+
+    if ($("#rb_pc_portatil input:checked").val() == "1") {
+
+        $("#tb_pc_portatil_cantidad").show();
+    } else {
+
+        $("#tb_pc_portatil_cantidad").hide();
+    }
+    if ($("#rb_pc_escritorio input:checked").val() == "1") {
+
+        $("#tb_pc_escritorio_cantidad").show();
+    } else {
+
+        $("#tb_pc_escritorio_cantidad").hide();
+    }
+    if ($("#rb_tableta input:checked").val() == "1") {
+
+        $("#tb_tableta_cantidad").show();
+    } else {
+
+        $("#tb_tableta_cantidad").hide();
+    }
+    
+    if ($("#rb_fax input:checked").val() == "1") {
+
+        $("#tb_fax_cantidad").show();
+    } else {
+
+        $("#tb_fax_cantidad").hide();
+    }
+
+    if ($("#rb_radio input:checked").val() == "1") {
+        $("#tb_radio_cantidad").show();
+    } else {
+        $("#tb_radio_cantidad").hide();
+    }
+
+    if ($("#rb_carro input:checked").val() == "1") {
+        $("#tb_carro_cantidad").show();
+    } else {
+        $("#tb_carro_cantidad").hide();
+    }
+
+    if ($("#rb_moto input:checked").val() == "1") {
+        $("#tb_moto_cantidad").show();
+    } else {
+        $("#tb_moto_cantidad").hide();
+    }
+
+    if ($("#rb_tv input:checked").val() == "1") {
+        $("#tb_tv_cantidad").show();
+    } else {
+        $("#tb_tv_cantidad").hide();
+    }
+
+    if ($("#rb_tv input:checked").val() == "1") {
+        $("#tb_tv_cantidad").show();
+    } else {
+        $("#tb_tv_cantidad").hide();
+    }
+    if ($("#rb_tv_convencional input:checked").val() == "1") {
+        $("#tb_tv_convencional_cantidad").show();
+    } else {
+        $("#tb_tv_convencional_cantidad").hide();
+    }
+    
+
+    if ($("#rb_internet input:checked").val() == "1") {
+
+        $("#seccion_tipo_coneccion").show();
+        $("#seccion_empresa_internet").show();
+        $("#seccion_router").show();
+
+    } else {
+        $("#seccion_tipo_coneccion").hide();
+        $("#seccion_empresa_internet").hide();
+        $("#seccion_router").hide();
+    }
+
+    if ($("#rb_tipo_coneccion input:checked").val() == "OTRO") {
+        $("#row_tipo_coneccion").show();
+    } else {
+        $("#row_tipo_coneccion").hide();
+    }
+    
     
 });

@@ -26,12 +26,12 @@ namespace ENAHO
 
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("principalhogares.aspx");
+            Response.Redirect("principalvivienda.aspx");
         }
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("principalvivienda.aspx");
+            Response.Redirect("usuario.aspx");
          //   Response.Redirect("usuarios.aspx");
         }
 

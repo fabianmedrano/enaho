@@ -38,7 +38,7 @@
                          
                             </div>
                             <div class="row">
-                                <asp:Button ID="bt_login" runat="server" Text="Entrar" CssClass="btn btn-primary  btn-block" OnClick="bt_login_Click" OnClientClick="btn_entrar" />
+                                <asp:Button ID="bt_login" runat="server" Text="Entrar" CssClass="btn btn-primary  btn-block" OnClick="bt_login_Click"  />
                             </div>                   
                         </div>
                   

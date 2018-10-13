@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Entidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,16 @@ namespace ENAHO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty((Session["login"] as Usuario).Pass) && string.IsNullOrEmpty((Session["login"] as Usuario).User))
+            {
+                Response.Redirect("login.aspx");
+            }
+            else
+            {
+               // usuario.InnerText = (Session["login"] as Usuario).User.ToString();
+                //  usuario.ToString((Session["login"] as Usuario).User.ToString()  );
+            }
+
             if (this.IsPostBack == false)
             {
                 LlenarComboProvincia();
@@ -64,8 +75,29 @@ namespace ENAHO
           {
             LlenarComboDistrito();
         }
-        
 
-    
+        protected void btn_Guardar_vivienda(object sender, EventArgs e)
+        {
+
+
+        }
+        public bool ValidarCampos()
+
+        {
+            bool validos = true;
+            
+            if (tb_direccion.Text.ToString().Trim().Equals("")||
+                tb_telefono.Text.ToString().Trim().Equals("") ||
+                tb_cantidad_personas_vivienda.Text.ToString().Trim().Equals("") ||
+                tb_cuartos_dormir.Text.ToString().Trim().Equals("") ||
+                tb_aposentos.Text.ToString().Trim().Equals("")
+                )
+            {
+                Console.WriteLine("faltan campos de texto que llenar");
+            }
+
+            return validos;
+
+        }
     }
 }

@@ -35,6 +35,8 @@ namespace ENAHO
                     }
                 }
             }catch (Exception ex) {
+                l_login.Text = ex.ToString();
+                l_login.Visible = true;
                 Console.WriteLine(ex.ToString());
             }
         }

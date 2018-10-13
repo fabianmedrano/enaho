@@ -25,11 +25,11 @@
                 <div class="panel-body">
                         <div class="col-md-5 left">
                             <div class="form-group">
-                                <div class=" row">
+                             <!--   <div class=" row">
                                     <label class="control-label col-md-3">Region:</label>
                                     <asp:TextBox runat="server" ID="tb_region"  CssClass="col-md-7 right top form-control"></asp:TextBox>
                                 </div><!-- Region-->
-                                <!--  -->
+                               
                                 <div class=" row">
                                     <label class="control-label col-md-3" ">Provincia:</label>
                                     <asp:DropDownList runat="server" ID="ddl_provincia"  CssClass="col-md-7 right top form-control DDL" AutoPostBack="True" OnSelectedIndexChanged="ddl_Provincia_SelectedIndexChanged"></asp:DropDownList>
@@ -60,7 +60,7 @@
                                         ¿Se aplica en esta vivienda el Módulo de Gasto de Consumo de los Hogares?:
 
                                     </label>
-                                    <asp:RadioButtonList runat="server" ID="rb_mgch"  CssClass="col-md-7 right  radio" AutoPostBack="True">
+                                    <asp:RadioButtonList runat="server" ID="rb_mgch"  CssClass="col-md-7 right  radio" >
                                         <asp:ListItem Text="Si" Value="SI" />
                                         <asp:ListItem Text="No" Value="NO" />
                                     </asp:RadioButtonList>
@@ -203,7 +203,7 @@
                         <div class="form-group">
                              <div class=" row">
                                 <label class="control-label col-md-5"> ¿La vivienda tiene cielo raso?:</label>
-                                 <asp:RadioButtonList runat="server" ID="RadioButtonList1"  CssClass="col-md-7 right " AutoPostBack="True" >
+                                 <asp:RadioButtonList runat="server" ID="rb_cielo_raso"  CssClass="col-md-7 right " AutoPostBack="True" >
                                     <asp:ListItem Text="Si" Value="1" />
                                     <asp:ListItem Text="No" Value="2" />
                                 </asp:RadioButtonList>
@@ -235,7 +235,7 @@
                         <div class="form-group">
                              <div class=" row">
                                 <label class="control-label col-md-5">¿La vivienda se encuentra sobre pilotes?:</label>
-                                 <asp:RadioButtonList runat="server" ID="RadioButtonList2"  CssClass="col-md-7 right " >
+                                 <asp:RadioButtonList runat="server" ID="rb_sobre_pilotes"  CssClass="col-md-7 right " >
                                     <asp:ListItem Text="Si" Value="1" />
                                     <asp:ListItem Text="No" Value="2" />
                                 </asp:RadioButtonList>
@@ -253,7 +253,7 @@
                              <div class=" row">
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">las paredes exteriores?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList3"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_estado_paredes"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="MALO" Value="1" />
                                         <asp:ListItem Text="REGULAR" Value="2" />
                                         <asp:ListItem Text="BUENO" Value="3" />
@@ -262,7 +262,7 @@
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">el techo?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList4"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_estado_techo"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="MALO" Value="1" />
                                         <asp:ListItem Text="REGULAR" Value="2" />
                                         <asp:ListItem Text="BUENO" Value="3" />
@@ -272,7 +272,7 @@
                      
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">el piso?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList5"  CssClass="col-md-4 right " >
+                                     <asp:RadioButtonList runat="server" ID="rb_estado_piso"  CssClass="col-md-4 right " >
                                         <asp:ListItem Text="MALO" Value="1" />
                                         <asp:ListItem Text="REGULAR" Value="2" />
                                         <asp:ListItem Text="BUENO" Value="3" />
@@ -287,7 +287,7 @@
                         <div class="form-group">
                             <div class=" row" runat="server" id="Div1">
                                 <label class="control-label col-md-5"> ¿Cuántos cuartos exclusivos para dormir tiene esta vivienda?</label>
-                                 <asp:TextBox runat="server" ID="TextBox2"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_cuartos_dormir"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
                             </div><!-- especificar tipo de vivienda -->
                         </div>
                             <!------------------------------------------------------------------------------------------------------------------>
@@ -296,7 +296,7 @@
                         <div class="form-group">
                             <div class=" row" runat="server" id="Div2">
                                 <label class="control-label col-md-13">Sin contar baños, cuarto de pilas, pasillos, garaje, ¿cuántos aposentos, en total (incluso Nº de cuartos) tiene esta vivienda?</label>
-                                 <asp:TextBox runat="server" ID="TextBox3"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_aposentos"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
                             </div><!-- especificar tipo de vivienda -->
                         </div>
                             <!------------------------------------------------------------------------------------------------------------------>
@@ -304,7 +304,7 @@
                         <div class="form-group">
                              <div class=" row">
                                 <label class="control-label col-md-5">Aproximadamente, ¿cuántos metros cuadrados de construcción tiene esta vivienda?:</label>
-                                 <asp:RadioButtonList runat="server" ID="RadioButtonList6"  CssClass="col-md-7 right " AutoPostBack="True" >
+                                 <asp:RadioButtonList runat="server" ID="rb_cantidad_metros"  CssClass="col-md-7 right "  >
                                     <asp:ListItem Text="Menos de 30m2" Value="1" />
                                     <asp:ListItem Text="De 30 a 40 m2" Value="2" />
                                     <asp:ListItem Text="De 41 a 60 m2" Value="3" />
@@ -314,7 +314,7 @@
                                     <asp:ListItem Text="Más de 200m2" Value="7" />
                                    
                                 </asp:RadioButtonList>
-                            </div><!-- material techo -->
+                            </div><!-- metros cuadrados -->
            
                         </div>
                             <!------------------------------------------------------------------------------------------------------------------>
@@ -322,7 +322,7 @@
                         <div class="form-group">
                              <div class=" row">
                                 <label class="control-label col-md-5"> ¿Esta vivienda se abastece de agua por...:</label>
-                                 <asp:RadioButtonList runat="server" ID="RadioButtonList7"  CssClass="col-md-7 right "  >
+                                 <asp:RadioButtonList runat="server" ID="rb_abastecimiento_agua"  CssClass="col-md-7 right "  >
                                     <asp:ListItem Text="tubería dentro de la vivienda?" Value="1" />
                                     <asp:ListItem Text="tubería fuera de la vivienda, pero dentro del lote o edificio?" Value="2" />
                                     <asp:ListItem Text="tubería fuera del lote o edificio?" Value="3" />
@@ -483,7 +483,7 @@
                              <div class=" row">
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">orgánica?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList10"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_separacion_organica"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -491,7 +491,7 @@
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">plástica?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList11"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_separacion_plastico"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -500,7 +500,7 @@
                      
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">de vidrio?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList12"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_separacion_vidrio"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -510,7 +510,7 @@
                             <div class=" row"><!---fila 2--->
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">de aluminio?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList13"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_separacion_alminio"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -518,7 +518,7 @@
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">de papel o cartón?	</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList14"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_separacion_papel"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -527,7 +527,7 @@
                      
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">Otro?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList15"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_separacion_otro"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -545,7 +545,7 @@
                              <div class=" row">
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">teléfono celular?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList16"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_telefono_celular"  CssClass="col-md-4 right " AutoPostBack="true"  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -554,109 +554,109 @@
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">teléfono residencial?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList17"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_telefono_recidencia"  CssClass="col-md-4 right " AutoPostBack="true"  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="TextBox4" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_telefono_recidencia_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                                 
                      
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">computadora portátil?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList18"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_pc_portatil"  CssClass="col-md-4 right "  AutoPostBack="true" >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
                                      
-                                     <asp:TextBox runat="server" ID="TextBox5" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_pc_portatil_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                                 
                             </div>
                             <div class=" row"><!---fila 2--->
                                 <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">computadora escritorio?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList19"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_pc_escritorio"  CssClass="col-md-4 right "  AutoPostBack="true" >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="TextBox6" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_pc_escritorio_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">tableta?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList20"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_tableta"  CssClass="col-md-4 right "  AutoPostBack="true" >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="TextBox7" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_tableta_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                                 
                      
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">fax (no de computadora)?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList21"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_fax"  CssClass="col-md-4 right "  AutoPostBack="true" >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
                                      
-                                     <asp:TextBox runat="server" ID="TextBox8" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_fax_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                             </div>
                             <div class=" row"><!---fila 3--->
                                 <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">radio o equipo de sonido?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList22"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_radio"  CssClass="col-md-4 right "  AutoPostBack="true" >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="TextBox9" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_radio_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">carro (no de trabajo)?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList23"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_carro"  CssClass="col-md-4 right "  AutoPostBack="true" >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="TextBox10" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_carro_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                                 
                      
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">moto (no  de  trabajo)?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList24"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_moto"  CssClass="col-md-4 right "  AutoPostBack="true" >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
                                      
-                                     <asp:TextBox runat="server" ID="TextBox11" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_moto_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                             </div>
                             <div class=" row"><!---fila 4--->
                                 <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">televisor de plasma, LCD o LED?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList25"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_tv"  CssClass="col-md-4 right "   AutoPostBack="true">
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="ss" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_tv_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">televisor convencional?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList26"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_tv_convencional"  CssClass="col-md-4 right "  AutoPostBack="true" >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="TextBox13" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_tv_convencional_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
                                  </div>
 
                             </div>
                              <div class=" row"><!---fila 5--->
                                 <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">refrigeradora?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList27"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_refrigeradora"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -665,7 +665,7 @@
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">sistema de agua caliente?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList28"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="agua_caliente"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -674,7 +674,7 @@
                      
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">tanque para almacenar agua?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList29"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_tanque_agua"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -684,7 +684,7 @@
                             <div class=" row"><!---fila 6--->
                                 <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">televisión por cable?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList30"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_televisor_cable"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -693,7 +693,7 @@
                             
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">televisión por satélite?</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList31"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_satelital"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -702,7 +702,7 @@
                      
                                  <div class="col-md-4 box">
                                      <label class="control-label col-md-7 ">otro tipo de tv paga?	</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList32"  CssClass="col-md-4 right "  >
+                                     <asp:RadioButtonList runat="server" ID="rb_otro_tipo_paga"  CssClass="col-md-4 right "  >
                                         <asp:ListItem Text="Si" Value="1" />
                                         <asp:ListItem Text="No" Value="0" />
                                     </asp:RadioButtonList>
@@ -711,7 +711,7 @@
                             </div>
                              <div class=" row" runat="server" id="Div3">
                                 <label class="control-label col-md-5">Especifique:</label>
-                                 <asp:TextBox runat="server" ID="TextBox12"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_otro_tv_paga"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
                             </div><!-- especificar tipo de vivienda -->
                         </div>
                         <hr />
@@ -719,58 +719,65 @@
                          <div class="form-group">
                              <div class=" row">
                                 <label class="control-label col-md-5">¿En esta vivienda tienen internet?:</label>
-                                 <asp:RadioButtonList runat="server" ID="rb_internet"  CssClass="col-md-7 right " AutoPostBack="True" >
+                                 <asp:RadioButtonList runat="server" ID="rb_internet"  CssClass="col-md-7 right "  AutoPostBack="true">
                                     <asp:ListItem Text="Si" Value="1" />
                                     <asp:ListItem Text="No" Value="2" />
                                 </asp:RadioButtonList>
                             </div><!--cielo razo -->
-                            <hr />
+                            
                             <!------------------------------------------------------------------------------------------------------------------>
-                            <div class="form-group">
+                            <div class="form-group" id="seccion_tipo_coneccion">
+                                <hr />
                                  <div class=" row">
                                     <label class="control-label col-md-5">¿El tipo de conexión que usan para accesar internet es...:</label>
-                                     <asp:RadioButtonList runat="server" ID="RadioButtonList33"  CssClass="col-md-7 right " AutoPostBack="True" >
-                                        <asp:ListItem Text=".por teléfono fijo (KÖLBI- HOGAR)?" Value="1" />
+                                     <asp:RadioButtonList runat="server" ID="rb_tipo_coneccion"  CssClass="col-md-7 right " AutoPostBack="True" >
+                                        <asp:ListItem Text="por teléfono fijo (KÖLBI- HOGAR)?" Value="1" />
                                         <asp:ListItem Text="por cable?" Value="2" />
                                         <asp:ListItem Text="por dispositivos móviles?" Value="3" />
                                         <asp:ListItem Text="Otro" Value="OTRO" />
                                    
                                     </asp:RadioButtonList>
                                 </div><!-- tipo vivienda -->
-                                <div class=" row" runat="server" id="Div4">
-                                    <label class="control-label col-md-5">Cuanto pagaria por mensalidad:</label>
-                                     <asp:TextBox runat="server" ID="TextBox14"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                <div class=" row" runat="server" id="row_tipo_coneccion">
+                                    <label class="control-label col-md-5">especifique:</label>
+                                     <asp:TextBox runat="server" ID="tb_otro_tipo_coneccion"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
                                 </div><!-- especificar tipo de vivienda -->
                             </div>
-                                                         <hr />
+                                                         
                             <!------------------------------------------------------------------------------------------------------------------>
-                            <div class="form-group">
-                   
+                            <div class="form-group" id="seccion_empresa_internet">
+                            <hr />
                                 <div class=" row" runat="server" id="Div5">
                                     <label class="control-label col-md-5">¿Qué empresa da el servicio de internet?:</label>
                                      <asp:TextBox runat="server" ID="TextBox15"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
                                 </div><!-- especificar tipo de vivienda -->
                             </div>
                                <!------------------------------------------------------------------------------------------------------------------>
-                             <hr />
+                             
                             <!------------------------------------------------------------------------------------------------------------------>
-                         <div class="form-group">
+                         <div class="form-group" id="seccion_router">
+                             <hr />
                              <div class=" row">
                                 <label class="control-label col-md-5"> ¿Tiene router inalámbrico?:</label>
-                                 <asp:RadioButtonList runat="server" ID="RadioButtonList34"  CssClass="col-md-7 right " >
+                                 <asp:RadioButtonList runat="server" ID="rb_router"  CssClass="col-md-7 right " >
                                     <asp:ListItem Text="Si" Value="1" />
                                     <asp:ListItem Text="No" Value="2" />
                                 </asp:RadioButtonList>
                             </div><!--cielo razo -->
                             <hr />
                         </div>
+
+
                 </div>
             </div>
-          
-        </div>
+            </div><!--  panel body-->
+                <div class="panel-footer" >
+                    <asp:Button runat="server" Text="Guardar" CssClass=" btn btn-primary" OnClick="btn_Guardar_vivienda"/>
+                </div>
 
              <!--------------------------------------------------------xxxxxxxx-------------------------------------------------->
         </div><!--  contenedor principal-->
+        </div>
     </form>
 </body>
 </html>

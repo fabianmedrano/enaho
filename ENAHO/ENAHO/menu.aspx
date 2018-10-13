@@ -53,7 +53,7 @@
                                         <span aria-hidden="true" class="glyphicon glyphicon-home"></span>
                                     </div>
                                     <div class="row">
-                                        Hogares
+                                        Viviendas
                                     </div>
                                 </div>
                             </asp:LinkButton>
