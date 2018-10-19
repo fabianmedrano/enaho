@@ -28,15 +28,15 @@
                             <div class=" row">
                                 <label class="control-label col-md-5">¿Todas las personas del hogar ¿viven aquí hace más de seis meses?</label>
                                  <asp:RadioButtonList runat="server" ID="rb_6_aqui_vivienda"  CssClass="col-md-7 right " AutoPostBack="True" >
-                                    <asp:ListItem Text="Si" Value="SI" />
-                                    <asp:ListItem Text="No" Value="NO" />
+                                    <asp:ListItem Text="Si" Value="1" />
+                                    <asp:ListItem Text="No" Value="0" />
                                 </asp:RadioButtonList>
                             </div><!--  de seis meses -->
                             <div class=" row">
                                 <label class="control-label col-md-5"> Esa o esas personas ¿tienen otro lugar donde vivir?</label>
                                  <asp:RadioButtonList runat="server" ID="rb_personas_otro_lugar_vivir"  CssClass="col-md-7 right " AutoPostBack="True" >
-                                    <asp:ListItem Text="Si" Value="SI" />
-                                    <asp:ListItem Text="No" Value="NO" />
+                                    <asp:ListItem Text="Si" Value="1" />
+                                    <asp:ListItem Text="No" Value="0" />
                                 </asp:RadioButtonList>
                             </div><!--  tienen otro lugar donde vivirs -->
                             <div class=" row" runat="server" id="row_numero_personas_otra_vivienda"><!--  VIV4 -->
@@ -46,8 +46,8 @@
                             <div class=" row" runat="server" ><!--  VIV5a -->
                                 <label class="control-label col-md-5">Alguna persona del hogar que no haya mencionado ¿está viviendo en otra parte?</label>
                                 <asp:RadioButtonList runat="server" ID="rb_personas_viviendo_otra_parte"  CssClass="col-md-7 right " AutoPostBack="True" >
-                                    <asp:ListItem Text="Si" Value="SI" />
-                                    <asp:ListItem Text="No" Value="NO" />
+                                    <asp:ListItem Text="Si" Value="1" />
+                                    <asp:ListItem Text="No" Value="0" />
                                 </asp:RadioButtonList>
                             </div><!-- Alguna persona del hogar que no haya mencionado ¿está viviendo en otra parte?  -->
                             <div class=" row" runat="server" ><!--  VIV5a -->
@@ -68,14 +68,14 @@
 
                                  <div class="left  col-md-6">
                                     <label class="control-label col-md-8">…servicio doméstico que duerme en la vivienda?</label>
-                                    <asp:RadioButtonList runat="server" ID="RadioButtonList1"  CssClass="col-md-4 right " AutoPostBack="True" >
+                                    <asp:RadioButtonList runat="server" ID="rb_servicio_domestico"  CssClass="col-md-4 right " AutoPostBack="True" >
                                         <asp:ListItem Text="Si" Value="SI" />
                                         <asp:ListItem Text="No" Value="NO" />
                                     </asp:RadioButtonList>
                                  </div><!--colmna derecha  …servicio doméstico que duerme en la vivienda -->
                                  <div class="right  col-md-6">
                                     <label class="control-label col-md-8">…personas a las que se les alquila un cuarto con o sin comida?</label>
-                                    <asp:RadioButtonList runat="server" ID="RadioButtonList2"  CssClass="col-md-4 right " AutoPostBack="True" >
+                                    <asp:RadioButtonList runat="server" ID="rb_alquilan_carto"  CssClass="col-md-4 right " AutoPostBack="True" >
                                         <asp:ListItem Text="Si" Value="SI" />
                                         <asp:ListItem Text="No" Value="NO" />
                                     </asp:RadioButtonList>

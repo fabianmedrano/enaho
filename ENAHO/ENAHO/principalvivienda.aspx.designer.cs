@@ -148,24 +148,6 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_espeficar_tipo_vivienda;
         
         /// <summary>
-        /// Control row_mensualidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_mensualidad;
-        
-        /// <summary>
-        /// Control tb_mensualidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_mensualidad;
-        
-        /// <summary>
         /// Control rb_esta_vivienda.
         /// </summary>
         /// <remarks>
@@ -184,13 +166,31 @@ namespace ENAHO {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_pagaria_mesualidad;
         
         /// <summary>
-        /// Control TextBox1.
+        /// Control tb_pagaria_mesualidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox tb_pagaria_mesualidad;
+        
+        /// <summary>
+        /// Control row_mensualidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_mensualidad;
+        
+        /// <summary>
+        /// Control tb_mensualidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_mensualidad;
         
         /// <summary>
         /// Control rb_material_predominante_vivienda.
@@ -427,13 +427,13 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_servicio_sanitario;
         
         /// <summary>
-        /// Control RadioButtonList8.
+        /// Control rb_servicio_sanitario_es.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList8;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_servicio_sanitario_es;
         
         /// <summary>
         /// Control rb_tiene_banos.
@@ -463,13 +463,13 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_tiene_banos;
         
         /// <summary>
-        /// Control RadioButtonList9.
+        /// Control rb_uso_bano.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList9;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_uso_bano;
         
         /// <summary>
         /// Control rb_luz_electrica.
@@ -814,13 +814,13 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.RadioButtonList rb_refrigeradora;
         
         /// <summary>
-        /// Control agua_caliente.
+        /// Control rb_agua_caliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList agua_caliente;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_agua_caliente;
         
         /// <summary>
         /// Control rb_tanque_agua.
@@ -859,13 +859,13 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.RadioButtonList rb_otro_tipo_paga;
         
         /// <summary>
-        /// Control Div3.
+        /// Control row_otro_tv_paga.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_otro_tv_paga;
         
         /// <summary>
         /// Control tb_otro_tv_paga.
@@ -922,13 +922,13 @@ namespace ENAHO {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div5;
         
         /// <summary>
-        /// Control TextBox15.
+        /// Control tb_empresa_internet.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox15;
+        protected global::System.Web.UI.WebControls.TextBox tb_empresa_internet;
         
         /// <summary>
         /// Control rb_router.

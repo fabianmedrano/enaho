@@ -254,6 +254,10 @@
       <Project>{6D350D6B-0027-4B44-A280-C090FED9005B}</Project>
       <Name>Entidad</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{112016d6-e059-4515-a274-2c36df155b09}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -18,6 +18,7 @@ namespace Entidad
         private Int16 tipo_vivienda;
         private string otro_tipo_vivienda;
         private string mesulaidad_vivienda;
+        private string pagaria_mesulaidad;
         /**/
         private Int16 esta_vivienda;
         private string otro_esta_vivienda;
@@ -71,10 +72,7 @@ namespace Entidad
 
 
         private Int16 eliminacion_basura;
-        private string otro_eliminacion_basura;/// <summary>
-        /// //////////////////////////////////////////////////////////////////////////////////
-        /// </summary>
-
+        private string otro_eliminacion_basura;
         /*separacion basura*/
 
         private Boolean separacion_organica;
@@ -109,17 +107,116 @@ namespace Entidad
 
         private Int16 tipo_coneccion;
         private string otro_tipo_coneccion;
-        /* falta ¿Qué empresa da el servicio de internet?*/
 
         private Boolean router;
 
         public Vivienda()
         {
-        }
+        id_vivienda=0;
+        DisIDDistrito =0;
+        direccion = "nada";
+        telefono = "nada";
+         Modulo_GCH = false;
+         numero_personas_vivienda = 0;
+         numero_hogares_vivienda = 0;
+        tipo_vivienda = 0;
+        otro_tipo_vivienda = "nada";
+        mesulaidad_vivienda = "nada";
+         pagaria_mesulaidad = "nada";
+        /**/
+         esta_vivienda = 0;
+         otro_esta_vivienda = "nada";
+        /*        Materiales            */
+        material_paredes = 0;
+         otro_material_paredes = "nada";
 
-    
+         material_techos = 0;
+         otro_material_techo = "nada";
 
-        public int Id_vivienda { get => id_vivienda; set => id_vivienda = value; }
+         cielo_raso;
+
+        material_piso;
+        otro_material_piso = "nada";
+
+        sobre_pilotes;
+
+        estado_paredes = 0;
+         estado_techo = 0;
+         estado_piso = 0;
+
+         cuartos_exclusivos_dormir = 0;
+         cantidad_aposentos = 0;
+
+
+         metros_cuadrados = 0;
+        /* agua*/
+        abastecimiento_agua = 0;
+
+
+         origen_agua_consumo = 0;
+         otro_origen_agua_consumo = "nada";
+
+
+        servicio_sanitario = 0;
+        otro_servicio_sanitario = "nada";
+
+         servicio_sanitario_es = 0;
+
+        bano = false;
+         cantidad_banos = 0;
+
+
+        uso_bano;
+
+        fuente_electricidad = 0;
+        otro_fuente_eletricidad = "nada";
+
+       energia_cosina = 0;
+        otro_energia_cosina = "nada";
+
+
+        eliminacion_basura = 0;
+        otro_eliminacion_basura = "nada";
+        /*separacion basura*/
+
+        separacion_organica;
+        separacion_plastico;
+        separacion_vidrio;
+        separacion_alumino;
+        separacion_papel;
+
+
+        /*hay en la vivienda*/
+
+        private string cantidad_telefono_celular = "nada";
+        private string cantidad_telefono_recidencial = "nada";
+        private string cantidad_portatil = "nada";
+        private string cantidad_pc_escritorio = "nada";
+        private string cantidad_tablet = "nada";
+        private string cantidad_fax = "nada";
+        private string cantidad_radio = "nada";
+        private string cantidad_carro = "nada";
+        private string cantidad_moto = "nada";
+        private string cantidad_tv_plasma = "nada";
+        private string cantidad_tv_convencional = "nada";
+
+        private Boolean refrigeradora;
+        private Boolean agua_caliente;
+        private Boolean agua_tanque;
+        private Boolean cable;
+        private Boolean satelital;
+        private string otro_tv_paga = "nada";
+        private Boolean internet;
+
+
+        private Int16 tipo_coneccion = 0;
+        otro_tipo_coneccion = "nada";
+
+    router = 0;
+
+    }
+
+    public int Id_vivienda { get => id_vivienda; set => id_vivienda = value; }
         public int DisIDDistrito1 { get => DisIDDistrito; set => DisIDDistrito = value; }
         public string Direccion { get => direccion; set => direccion = value; }
         public string Telefono { get => telefono; set => telefono = value; }
@@ -129,6 +226,7 @@ namespace Entidad
         public short Tipo_vivienda { get => tipo_vivienda; set => tipo_vivienda = value; }
         public string Otro_tipo_vivienda { get => otro_tipo_vivienda; set => otro_tipo_vivienda = value; }
         public string Mesulaidad_vivienda { get => mesulaidad_vivienda; set => mesulaidad_vivienda = value; }
+        public string Pagaria_mesulaidad { get => pagaria_mesulaidad; set => pagaria_mesulaidad = value; }
         public short Esta_vivienda { get => esta_vivienda; set => esta_vivienda = value; }
         public string Otro_esta_vivienda { get => otro_esta_vivienda; set => otro_esta_vivienda = value; }
         public short Material_paredes { get => material_paredes; set => material_paredes = value; }
