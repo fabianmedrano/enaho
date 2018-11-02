@@ -13,5 +13,14 @@ namespace ENAHO
         {
 
         }
+
+
+        protected void btn_siguiente_hogares(object sender, EventArgs e)
+        {
+          //  Response.Redirect("principalpersonas.aspx");
+        }
     }
+
+
+
 }

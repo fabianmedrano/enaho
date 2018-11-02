@@ -15,13 +15,14 @@ namespace ENAHO
         void Application_Start(object sender, EventArgs e)
         {
 
-            Application["App"] = "";
+            Application["idVivienda"] = 0 ;
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
         void Session_Start(object sender, EventArgs e)
         {
             Session["Login"] =  new Usuario();
+           
         }
     }
 }

@@ -111,6 +111,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\menu.css" />
+    <Content Include="Content\nav.css" />
     <Content Include="Content\principal.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
@@ -129,6 +130,7 @@
     <Content Include="login.aspx" />
     <Content Include="menu.aspx" />
     <Content Include="principalhogares.aspx" />
+    <Content Include="principalpersonas.aspx" />
     <Content Include="principalvivienda.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -137,6 +139,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\mascaras.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\principal.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -193,6 +196,13 @@
     </Compile>
     <Compile Include="principalhogares.aspx.designer.cs">
       <DependentUpon>principalhogares.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="principalpersonas.aspx.cs">
+      <DependentUpon>principalpersonas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="principalpersonas.aspx.designer.cs">
+      <DependentUpon>principalpersonas.aspx</DependentUpon>
     </Compile>
     <Compile Include="principalvivienda.aspx.cs">
       <DependentUpon>principalvivienda.aspx</DependentUpon>

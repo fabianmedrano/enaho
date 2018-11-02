@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/principal.js"></script>
+    <script src="Scripts/mascaras.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/principal.css" rel="stylesheet" />
     <title>ENAHO</title>
@@ -53,7 +54,7 @@
                                 </div><!-- direccion-->
                                 <div class=" row">
                                     <label class="control-label col-md-3">Telefono:</label>
-                                    <asp:TextBox runat="server" ID="tb_telefono"  CssClass="col-md-7 right top form-control "></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="tb_telefono"  CssClass="col-md-7 right top form-control telefono "></asp:TextBox>
                                 </div><!-- telefono-->
                                 <div class=" row">
                                     <label class="control-label col-md-12"> 
@@ -80,7 +81,7 @@
                         <div class="form-group">
                             <div class=" row">
                                 <label class="control-label col-md-5">Numero de Personas en la vivienda:</label>
-                                <asp:TextBox runat="server" ID="tb_cantidad_personas_vivienda"  CssClass="col-md-7 right top form-control"></asp:TextBox>
+                                <asp:TextBox runat="server" ID="tb_cantidad_personas_vivienda"  CssClass="col-md-7 right top form-control numero"></asp:TextBox>
                             </div><!-- numero de personas vivienda-->
                              <div class=" row">
                                 <label class="control-label col-md-5">Comparten mismo presupuesto:</label>
@@ -91,7 +92,7 @@
                             </div><!-- mismo presupuesto -->
                              <div class=" row" runat="server" id="row_numero_hogares_vivienda">
                                 <label class="control-label col-md-5">Numero de hogares en la vivienda:</label>
-                                 <asp:TextBox runat="server" ID="tb_numero_hogares_vivienda"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_numero_hogares_vivienda"  CssClass="col-md-7 right top form-control numero" > </asp:TextBox>
                             </div><!-- numero de hohares en vivienda -->
                         </div>
                     </div>
@@ -146,11 +147,11 @@
                             </div><!-- tipo vivienda -->
                             <div class=" row" runat="server" id="row_pagaria_mesualidad">
                                 <label class="control-label col-md-5">Cuanto pagaria por mensalidad:</label>
-                                 <asp:TextBox runat="server" ID="tb_pagaria_mesualidad"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_pagaria_mesualidad"  CssClass="col-md-7 right top form-control montos" > </asp:TextBox>
                             </div><!-- especificar tipo de vivienda -->
                                <div class=" row" runat="server" id="row_mensualidad">
                                 <label class="control-label col-md-5">Mensualidad:</label>
-                                 <asp:TextBox runat="server" ID="tb_mensualidad"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_mensualidad"  CssClass="col-md-7 right top form-control montos" > </asp:TextBox>
                             </div><!-- mensualidad -->
                         </div>
                         <!-- informacion para cada vivienda -->
@@ -168,7 +169,7 @@
                                     <asp:ListItem Text="Zinc" Value="5" />
                                     <asp:ListItem Text="Fibrocemento (Fibrolit, Ricalit) " Value="6" />
                                     <asp:ListItem Text="Fibras naturales (bambú, caña, chonta)" Value="7" />
-                                    <asp:ListItem Text="Material de desecho" Value="0" />
+                                    <asp:ListItem Text="Material de desecho" Value="7" />
                                     <asp:ListItem Text="Otro" Value="OTRO" />
                                    
                                 </asp:RadioButtonList>
@@ -189,7 +190,7 @@
                                     <asp:ListItem Text="Entrepiso" Value="3" />
                                     <asp:ListItem Text="Fibras naturales (bambú, caña, chonta)" Value="4" />
                                     <asp:ListItem Text="Zinc" Value="5" />
-                                    <asp:ListItem Text="Material de desecho" Value="0" />
+                                    <asp:ListItem Text="Material de desecho" Value="6" />
                                     <asp:ListItem Text="Otro" Value="OTRO" />
                                    
                                 </asp:RadioButtonList>
@@ -221,7 +222,7 @@
                                     <asp:ListItem Text="Cemento (lujado o no)" Value="2" />
                                     <asp:ListItem Text="Madera" Value="3" />
                                     <asp:ListItem Text="Material natural (bambú, caña, chonta" Value="4" />
-                                    <asp:ListItem Text="Material de desecho" Value="0" />
+                                    <asp:ListItem Text="Material de desecho" Value="5" />
                                     <asp:ListItem Text="Otro" Value="OTRO" />
                                    
                                 </asp:RadioButtonList>
@@ -773,7 +774,7 @@
             </div>
             </div><!--  panel body-->
                 <div class="panel-footer" >
-                    <asp:Button runat="server" Text="Guardar" CssClass=" btn btn-primary" OnClick="btn_Guardar_vivienda"/>
+                    <asp:Button runat="server" Text="Guardar" CssClass=" btn btn-primary" OnClick="btn_Guardar_vivienda" />
                 </div>
 
              <!--------------------------------------------------------xxxxxxxx-------------------------------------------------->

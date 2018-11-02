@@ -1,9 +1,11 @@
 ﻿body {
     background-color: #337ab7;
-    margin-top: 20px;
+    
     font-family: monospace;
     /*opacity: 0.5;*/
 }
+
+
 
 .center-block {
     float: none;
@@ -22,8 +24,9 @@
 .panel > .panel-heading {
     background-image: none;
     background-color: #286090;
-    border-radius:inherit;
+    border-radius: inherit;
     color: white;
+    margin-top: 20px;
 }
 
 .panel {
@@ -62,6 +65,7 @@ hr {
     background-color: #335c80;
     border-color: #2469a5;
     border-radius: initial;
+
 }
 
 .panel .panel-footer {

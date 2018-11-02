@@ -81,12 +81,16 @@ namespace ENAHO
             if (ValidarCampos())
             {
                 Guardar_datos();
+                string script = "alert('faltan campos que llenar')"; ;
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                Response.Redirect("principalhogares.aspx");
             }
             else
             {
                 string script = "alert('faltan campos que llenar')"; ;
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             }
+           // Response.Redirect("principalhogares.aspx");
 
         }
 
@@ -130,17 +134,17 @@ namespace ENAHO
                 vivienda.Esta_vivienda = Convert.ToInt16(rb_esta_vivienda.SelectedValue.ToString());
                 if (vivienda.Esta_vivienda == 2 || vivienda.Esta_vivienda == 3)
                 {
-                    vivienda.Mesulaidad_vivienda = tb_mensualidad.Text.ToString().Trim();
+                    vivienda.Mesulaidad_vivienda = Convert.ToInt32( tb_mensualidad.Text.ToString().Trim());
                 }
                 if (vivienda.Esta_vivienda == 2 || vivienda.Esta_vivienda == 1)
                 {
-                    vivienda.Pagaria_mesulaidad = tb_pagaria_mesualidad.Text.ToString().Trim();
-                    vivienda.Pagaria_mesulaidad = tb_pagaria_mesualidad.Text.ToString().Trim();
+                    vivienda.Pagaria_mesulaidad = Convert.ToInt32(tb_pagaria_mesualidad.Text.ToString().Trim());
+                  //  vivienda.Pagaria_mesulaidad = tb_pagaria_mesualidad.Text.ToString().Trim();
                 }
             }
             catch (FormatException ex)
             {
-                vivienda.Pagaria_mesulaidad = tb_pagaria_mesualidad.Text.ToString().Trim();
+                vivienda.Pagaria_mesulaidad = Convert.ToInt32(tb_pagaria_mesualidad.Text.ToString().Trim());
                 Console.WriteLine(ex.Message);
             }
 
@@ -266,54 +270,54 @@ namespace ENAHO
 
             if (rb_telefono_celular.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_telefono_celular = tb_cantidad_telefonos.Text.ToString().Trim();
+                vivienda.Cantidad_telefono_celular = Convert.ToInt32( tb_cantidad_telefonos.Text.ToString().Trim());
             }
 
             if (rb_telefono_recidencia.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_telefono_recidencial = tb_telefono_recidencia_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_telefono_recidencial = Convert.ToInt32(tb_telefono_recidencia_cantidad.Text.ToString().Trim());
             }
             if (rb_pc_portatil.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_portatil = tb_pc_portatil_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_portatil = Convert.ToInt32( tb_pc_portatil_cantidad.Text.ToString().Trim());
             }
 
             if (rb_pc_escritorio.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_pc_escritorio = tb_pc_escritorio_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_pc_escritorio = Convert.ToInt32(tb_pc_escritorio_cantidad.Text.ToString().Trim());
             }
             if (rb_tableta.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_tablet = tb_tableta_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_tablet = Convert.ToInt32(tb_tableta_cantidad.Text.ToString().Trim());
             }
 
             if (rb_fax.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_fax = tb_fax_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_fax = Convert.ToInt32(tb_fax_cantidad.Text.ToString().Trim());
             }
             if (rb_radio.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_radio = tb_radio_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_radio = Convert.ToInt32(tb_radio_cantidad.Text.ToString().Trim());
             }
 
             if (rb_carro.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_carro = tb_carro_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_carro = Convert.ToInt32(tb_carro_cantidad.Text.ToString().Trim());
             }
             if (rb_moto.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_moto = tb_moto_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_moto = Convert.ToInt32(tb_moto_cantidad.Text.ToString().Trim());
             }
 
             if (rb_tv.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_tv_plasma = tb_tv_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_tv_plasma = Convert.ToInt32(tb_tv_cantidad.Text.ToString().Trim());
             }
 
 
             if (rb_tv_convencional.SelectedValue.ToString() == "true")
             {
-                vivienda.Cantidad_tv_convencional = tb_tv_convencional_cantidad.Text.ToString().Trim();
+                vivienda.Cantidad_tv_convencional = Convert.ToInt32(tb_tv_convencional_cantidad.Text.ToString().Trim());
             }
 
             vivienda.Refrigeradora = Convert.ToBoolean(rb_refrigeradora.SelectedValue.ToString());
@@ -342,7 +346,7 @@ namespace ENAHO
             }
 
 
-            new DataVivienda().InsertarVivienda(vivienda);
+            Application["idVivienda"]  = new DataVivienda().InsertarVivienda(vivienda);
             return true;
         }
         public bool ValidarCampos()

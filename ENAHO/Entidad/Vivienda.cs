@@ -17,8 +17,8 @@ namespace Entidad
         private Int16 numero_hogares_vivienda;
         private Int16 tipo_vivienda;
         private string otro_tipo_vivienda;
-        private string mesulaidad_vivienda;
-        private string pagaria_mesulaidad;
+        private int mesulaidad_vivienda;
+        private int pagaria_mesulaidad;
         /**/
         private Int16 esta_vivienda;
         private string otro_esta_vivienda;
@@ -84,17 +84,17 @@ namespace Entidad
 
         /*hay en la vivienda*/
         
-        private string cantidad_telefono_celular;
-        private string cantidad_telefono_recidencial;
-        private string cantidad_portatil;
-        private string cantidad_pc_escritorio;
-        private string cantidad_tablet;
-        private string cantidad_fax;
-        private string cantidad_radio;
-        private string cantidad_carro;
-        private string cantidad_moto;
-        private string cantidad_tv_plasma;
-        private string cantidad_tv_convencional;
+        private int cantidad_telefono_celular;
+        private int cantidad_telefono_recidencial;
+        private int cantidad_portatil;
+        private int cantidad_pc_escritorio;
+        private int cantidad_tablet;
+        private int cantidad_fax;
+        private int cantidad_radio;
+        private int cantidad_carro;
+        private int cantidad_moto;
+        private int cantidad_tv_plasma;
+        private int cantidad_tv_convencional;
 
         private Boolean refrigeradora;
         private Boolean agua_caliente;
@@ -110,68 +110,68 @@ namespace Entidad
 
         private Boolean router;
 
-        public Vivienda()
+    public Vivienda()
         {
         id_vivienda=0;
         DisIDDistrito =0;
         direccion = "nada";
         telefono = "nada";
-         Modulo_GCH = false;
-         numero_personas_vivienda = 0;
-         numero_hogares_vivienda = 0;
+        Modulo_GCH = false;
+        numero_personas_vivienda = 0;
+        numero_hogares_vivienda = 0;
         tipo_vivienda = 0;
         otro_tipo_vivienda = "nada";
-        mesulaidad_vivienda = "nada";
-         pagaria_mesulaidad = "nada";
+        mesulaidad_vivienda = 0;
+        pagaria_mesulaidad = 0;
         /**/
-         esta_vivienda = 0;
-         otro_esta_vivienda = "nada";
+        esta_vivienda = 0;
+        otro_esta_vivienda = "nada";
         /*        Materiales            */
         material_paredes = 0;
-         otro_material_paredes = "nada";
+        otro_material_paredes = "nada";
 
-         material_techos = 0;
-         otro_material_techo = "nada";
+        material_techos = 0;
+        otro_material_techo = "nada";
 
-         cielo_raso;
+        cielo_raso = false;
 
-        material_piso;
+        material_piso = 0;
         otro_material_piso = "nada";
 
-        sobre_pilotes;
+        sobre_pilotes = false;
 
         estado_paredes = 0;
-         estado_techo = 0;
-         estado_piso = 0;
+        estado_techo = 0;
+        estado_piso = 0;
 
-         cuartos_exclusivos_dormir = 0;
-         cantidad_aposentos = 0;
+        cuartos_exclusivos_dormir = 0;
+        cantidad_aposentos = 0;
 
 
-         metros_cuadrados = 0;
+        metros_cuadrados = 0;
         /* agua*/
         abastecimiento_agua = 0;
 
 
-         origen_agua_consumo = 0;
-         otro_origen_agua_consumo = "nada";
+        origen_agua_consumo = 0;
+        otro_origen_agua_consumo = "nada";
 
 
         servicio_sanitario = 0;
         otro_servicio_sanitario = "nada";
 
-         servicio_sanitario_es = 0;
+        servicio_sanitario_es = 0;
 
         bano = false;
-         cantidad_banos = 0;
+        cantidad_banos = 0;
 
 
-        uso_bano;
+        uso_bano = false;
 
         fuente_electricidad = 0;
         otro_fuente_eletricidad = "nada";
 
-       energia_cosina = 0;
+        energia_cosina = 0;
         otro_energia_cosina = "nada";
 
 
@@ -179,42 +179,42 @@ namespace Entidad
         otro_eliminacion_basura = "nada";
         /*separacion basura*/
 
-        separacion_organica;
-        separacion_plastico;
-        separacion_vidrio;
-        separacion_alumino;
-        separacion_papel;
+        separacion_organica = false;
+        separacion_plastico = false;
+        separacion_vidrio = false;
+        separacion_alumino = false;
+        separacion_papel = false;
 
 
         /*hay en la vivienda*/
 
-        private string cantidad_telefono_celular = "nada";
-        private string cantidad_telefono_recidencial = "nada";
-        private string cantidad_portatil = "nada";
-        private string cantidad_pc_escritorio = "nada";
-        private string cantidad_tablet = "nada";
-        private string cantidad_fax = "nada";
-        private string cantidad_radio = "nada";
-        private string cantidad_carro = "nada";
-        private string cantidad_moto = "nada";
-        private string cantidad_tv_plasma = "nada";
-        private string cantidad_tv_convencional = "nada";
+        cantidad_telefono_celular =0;
+        cantidad_telefono_recidencial = 0;
+            cantidad_portatil = 0;
+            cantidad_pc_escritorio = 0;
+            cantidad_tablet = 0;
+            cantidad_fax = 0;
+            cantidad_radio = 0;
+            cantidad_carro = 0;
+            cantidad_moto = 0;
+            cantidad_tv_plasma = 0;
+            cantidad_tv_convencional = 0;
 
-        private Boolean refrigeradora;
-        private Boolean agua_caliente;
-        private Boolean agua_tanque;
-        private Boolean cable;
-        private Boolean satelital;
-        private string otro_tv_paga = "nada";
-        private Boolean internet;
+            refrigeradora = false;
+        agua_caliente = false;
+        agua_tanque = false;
+        cable = false;
+        satelital = false;
+        otro_tv_paga = "nada";
+        internet = false;
 
 
-        private Int16 tipo_coneccion = 0;
+        tipo_coneccion = 0;
         otro_tipo_coneccion = "nada";
 
-    router = 0;
+        router = false;
 
-    }
+     }
 
     public int Id_vivienda { get => id_vivienda; set => id_vivienda = value; }
         public int DisIDDistrito1 { get => DisIDDistrito; set => DisIDDistrito = value; }
@@ -225,8 +225,8 @@ namespace Entidad
         public short Numero_hogares_vivienda { get => numero_hogares_vivienda; set => numero_hogares_vivienda = value; }
         public short Tipo_vivienda { get => tipo_vivienda; set => tipo_vivienda = value; }
         public string Otro_tipo_vivienda { get => otro_tipo_vivienda; set => otro_tipo_vivienda = value; }
-        public string Mesulaidad_vivienda { get => mesulaidad_vivienda; set => mesulaidad_vivienda = value; }
-        public string Pagaria_mesulaidad { get => pagaria_mesulaidad; set => pagaria_mesulaidad = value; }
+        public int Mesulaidad_vivienda { get => mesulaidad_vivienda; set => mesulaidad_vivienda = value; }
+        public int Pagaria_mesulaidad { get => pagaria_mesulaidad; set => pagaria_mesulaidad = value; }
         public short Esta_vivienda { get => esta_vivienda; set => esta_vivienda = value; }
         public string Otro_esta_vivienda { get => otro_esta_vivienda; set => otro_esta_vivienda = value; }
         public short Material_paredes { get => material_paredes; set => material_paredes = value; }
@@ -263,17 +263,17 @@ namespace Entidad
         public bool Separacion_vidrio { get => separacion_vidrio; set => separacion_vidrio = value; }
         public bool Separacion_alumino { get => separacion_alumino; set => separacion_alumino = value; }
         public bool Separacion_papel { get => separacion_papel; set => separacion_papel = value; }
-        public string Cantidad_telefono_celular { get => cantidad_telefono_celular; set => cantidad_telefono_celular = value; }
-        public string Cantidad_telefono_recidencial { get => cantidad_telefono_recidencial; set => cantidad_telefono_recidencial = value; }
-        public string Cantidad_portatil { get => cantidad_portatil; set => cantidad_portatil = value; }
-        public string Cantidad_pc_escritorio { get => cantidad_pc_escritorio; set => cantidad_pc_escritorio = value; }
-        public string Cantidad_tablet { get => cantidad_tablet; set => cantidad_tablet = value; }
-        public string Cantidad_fax { get => cantidad_fax; set => cantidad_fax = value; }
-        public string Cantidad_radio { get => cantidad_radio; set => cantidad_radio = value; }
-        public string Cantidad_carro { get => cantidad_carro; set => cantidad_carro = value; }
-        public string Cantidad_moto { get => cantidad_moto; set => cantidad_moto = value; }
-        public string Cantidad_tv_plasma { get => cantidad_tv_plasma; set => cantidad_tv_plasma = value; }
-        public string Cantidad_tv_convencional { get => cantidad_tv_convencional; set => cantidad_tv_convencional = value; }
+        public int Cantidad_telefono_celular { get => cantidad_telefono_celular; set => cantidad_telefono_celular = value; }
+        public int Cantidad_telefono_recidencial { get => cantidad_telefono_recidencial; set => cantidad_telefono_recidencial = value; }
+        public int Cantidad_portatil { get => cantidad_portatil; set => cantidad_portatil = value; }
+        public int Cantidad_pc_escritorio { get => cantidad_pc_escritorio; set => cantidad_pc_escritorio = value; }
+        public int Cantidad_tablet { get => cantidad_tablet; set => cantidad_tablet = value; }
+        public int Cantidad_fax { get => cantidad_fax; set => cantidad_fax = value; }
+        public int Cantidad_radio { get => cantidad_radio; set => cantidad_radio = value; }
+        public int Cantidad_carro { get => cantidad_carro; set => cantidad_carro = value; }
+        public int Cantidad_moto { get => cantidad_moto; set => cantidad_moto = value; }
+        public int Cantidad_tv_plasma { get => cantidad_tv_plasma; set => cantidad_tv_plasma = value; }
+        public int Cantidad_tv_convencional { get => cantidad_tv_convencional; set => cantidad_tv_convencional = value; }
         public bool Refrigeradora { get => refrigeradora; set => refrigeradora = value; }
         public bool Agua_caliente { get => agua_caliente; set => agua_caliente = value; }
         public bool Agua_tanque { get => agua_tanque; set => agua_tanque = value; }

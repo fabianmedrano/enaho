@@ -12,8 +12,9 @@ namespace Datos
     {
         #region InsertarEmpleado
 
-        public void InsertarVivienda(Vivienda vivienda)// areglar
+        public int InsertarVivienda(Vivienda vivienda)// areglar
         {
+            int idVivienda = 0;
             SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
             try
             {
@@ -22,6 +23,7 @@ namespace Datos
                 command.Parameters.Clear();
 
                 command.Parameters.Add(new SqlParameter("@id", vivienda.DisIDDistrito1));
+                command.Parameters.Add(new SqlParameter("@distrito", vivienda.DisIDDistrito1));
                 command.Parameters.Add(new SqlParameter("@direccion", vivienda.Direccion));
                 command.Parameters.Add(new SqlParameter("@telefono", vivienda.Telefono));
                 command.Parameters.Add(new SqlParameter("@modulo", vivienda.Modulo_GCH1));
@@ -29,7 +31,7 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@numeropersonas", vivienda.Numero_personas_vivienda));
                 command.Parameters.Add(new SqlParameter("@numerohogares", vivienda.Numero_hogares_vivienda));
                 command.Parameters.Add(new SqlParameter("@tipovivienda", vivienda.Tipo_vivienda));
-             //   command.Parameters.Add(new SqlParameter("@otrotipovivienda", vivienda.Otro_tipo_vivienda));
+                command.Parameters.Add(new SqlParameter("@otrotipovivienda", vivienda.Otro_tipo_vivienda));
 
                 command.Parameters.Add(new SqlParameter("@mensualidad", vivienda.Mesulaidad_vivienda));
                 command.Parameters.Add(new SqlParameter("@pagariamensualidad", vivienda.Pagaria_mesulaidad));
@@ -71,7 +73,7 @@ namespace Datos
                 /*basura*/
                 command.Parameters.Add(new SqlParameter("@eliminacionbasura", vivienda.Eliminacion_basura));
                 command.Parameters.Add(new SqlParameter("@otroeliminacionbasura", vivienda.Otro_eliminacion_basura));
-                
+
                 /*separacion*/
                 command.Parameters.Add(new SqlParameter("@separacionorganica", vivienda.Separacion_organica));
                 command.Parameters.Add(new SqlParameter("@separacionplastico", vivienda.Separacion_plastico));
@@ -107,7 +109,15 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@otrotipoconeccion", vivienda.Otro_tipo_coneccion));
                 command.Parameters.Add(new SqlParameter("@router", vivienda.Router));
                 command.Connection.Open();
-                command.ExecuteNonQuery();
+                // command.ExecuteNonQuery();
+                SqlDataReader RESULTADO = command.ExecuteReader();
+                /////////////////////////////////
+
+                while (RESULTADO.Read())
+                {
+                     idVivienda = Convert.ToInt32(RESULTADO["idvivienda"].ToString());
+
+                }
             }
             catch (Exception ex)
             {
@@ -121,6 +131,8 @@ namespace Datos
                 }
                 command.Dispose();
             }
+                  
+            return idVivienda ;
         }
         #endregion
     

@@ -22,98 +22,167 @@ SELECT* FROM  t_entrevistador WHERE usuario = @user and pass =@pass
  go
 
  create table t_tipo_vivieda(
-	id_tipo_vivienda int primary key,
+	id_tipo_vivienda int IDENTITY(1,1) PRIMARY KEY,
 
-	tipo varchar 
+	tipo varchar (100)
 );
+ create table t_esta_vivieda(
+	id int IDENTITY(1,1) PRIMARY KEY,
+
+	tipo varchar (50)
+);
+ create table t_material_techo(
+	id int IDENTITY(1,1) PRIMARY KEY,
+	material varchar (100)
+);
+
+
+
+ create table t_material_piso(
+	id int IDENTITY(1,1) PRIMARY KEY,
+	material varchar (100)
+);
+ create table t_material_paredes(
+	id int IDENTITY(1,1) PRIMARY KEY,
+	material varchar (100)
+);
+
+ create table t_metros(
+	id int IDENTITY(1,1) PRIMARY KEY,
+	metros varchar (50)
+);
+drop table agua_abastecimiento
+
+create table t_agua_abastecimiento(
+ id  int IDENTITY(1,1)primary key,
+ agua_abastecimiento  varchar(100)
+ );
 create table agua_consumo_provediente(
- id_agua_consumo_provediente  int primary key,
- agua_consumo_provediente   varchar,
+ id_agua_consumo_provediente  int IDENTITY(1,1) primary key,
+ agua_consumo_provediente   varchar(100),
  );
 create table t_sanitario(
-	id_sanitario int,	
-	servicio_sanitario_sistema varchar,
-	sanitario_uso bit, --v13b
+	id_sanitario int IDENTITY(1,1) PRIMARY KEY,	
+	servicio_sanitario_sistema varchar(100)
 );
 
 create table t_provedor_luz (
-	id_provedor_luz int primary key,
-	provedor_luz varchar
+	id_provedor_luz int IDENTITY(1,1) PRIMARY KEY,
+	provedor_luz varchar(50)
 );
 
 create table t_provedor_internet (
-	id_provedor_internet int primary key,
-	provedor_internet varchar
+	id_provedor_internet int IDENTITY(1,1) PRIMARY KEY,
+	provedor_internet varchar (100)
 );
 
 create table t_basura (
-	id_basra int primary key,
-	basura varchar
+	id_basura int IDENTITY(1,1) PRIMARY KEY,
+	basura varchar (100)
+);
+go
+create table t_articulo(
+	id_articulo int IDENTITY(1,1) PRIMARY KEY,
+	articulo varchar(100)
 );
 
-create t_articulo(
-	id_articulo int primary key,
-	articulo varchar
-);
-
-create t_energia_cosina(
-	id_energia_cosina int primary key,
-	energia_cosina varchar
+create table t_energia_cosina(
+	id_energia_cosina int IDENTITY(1,1) PRIMARY KEY,
+	energia_cosina varchar(35)
 );
 
  create table t_vivienda (
-	id_vivienda int primary key ,
-
-	-----
-	idDistrito int,
-	amgc bit,--aplia modulo de gasto de consumo de hogares
-	personas_envivienda int ,
-	direccion varchar,
+	id  int IDENTITY(1,1) PRIMARY KEY,
+	direccion varchar(150),
 	telefono varchar(8),
-	tipo_vivienda  int foreign key references t_tipo_vivieda(id_tipo_vivienda) ,
+	modulo bit,
 
-	-------------------------
-	relacion_vivienda tinyint,
-	mensualidad int,
+	numeropersonas int,
+	numerohogares int,
+---tabla 
+tipovivienda int foreign key references t_tipo_vivieda(id_tipo_vivienda) ,
 
+mensualidad int,
+pagariamensualidad int,
+esta int  foreign key references t_esta_vivieda(id),
+---tabla
+materialperedes int  foreign key references t_material_paredes(id),
 
-	----------------------
-	 material_paredes varchar,
-	 material_techo varchar,
-	 cielo_raso bit,
-	 material_piso varchar,
-	 pilotes bit,
-	 -------------------
-	 estado_paredes tinyint,
-	 estado_techo tinyint,
-	 estado_piso tinyint,
-	 ----------------------------
-	 cuartos_dormir tinyint,
+---tabla
+materialtecho  int  foreign key references t_material_techo(id),
 
-	 aposentos tinyint,
+cieloraso bit,
 
-	 metros_cuadrados tinyint,
-	 abastese_agua tinyint,--V11
-	 id_agua_consumo_provediente  int  foreign key references agua_consumo_provediente(id_agua_consumo_provediente),
-
-	 ----------------------
-	 id_sanitario int,
-	 ------------------------
-
-	cantidad_banos tinyint,
-	uso_banos bit,
-
-	id_provedor_luz int    foreign key references t_provedor_luz(id_provedor_luz),--v15
-
-	id_provedor_internet int    foreign key references t_provedor_internet(id_provedor_internet),
-
-	energia_cosina int foreign key references t_energia_cosica(id_energia_cosina), 
+materialpiso  int  foreign key references t_material_piso(id),
 
 
-	router bit
+sobrepilotes bit,
+estadoparedes tinyint,
+
+estadotecho tinyint,
+estadopiso tinyint,
+cuartosdormir tinyint,
+cantidadaposentos tinyint,
+
+metroscuadrados int foreign key references t_metros(id),
+abastecimientoagua  int foreign key references t_agua_abastecimiento(id),
+-- tabla
+origenaguaconsumo  int foreign key references agua_consumo_provediente(id_agua_consumo_provediente),
+
+
+serviciosanitario int foreign key references t_sanitario(id_sanitario),
+
+serviciosanitaioes bit,
+viviendabano  bit,
+
+cantidadbanos tinyint,
+usobano bit,
+--tabla
+@fuenteelectricidad int,
+@otrofuenteelectricidad varchar,
+
+@enegiacosina int,
+@otroenergiacosina varchar,
+              
+@eliminacionbasura int,
+@otroeliminacionbasura varchar,
+@separacionorganica bit,
+@separacionplastico bit,
+@separacionvidrio bit,
+@separacionaluminio bit,
+@separacionpapel bit,
+
+@cantidadtelefonocelular int,
+@cantidadtelefonorecidencial int,
+@cantidadportatil int ,
+
+
+@cantidadpcescritorio int,
+@table int,
+@cantidadfax int,
+@cantidadradio int,
+
+@cantidadcarro int,
+@cantidadmoto int,
+@cantidadtvplasma int,
+@cantidadtvconvencional int,
+
+@regrigeradora int,
+@aguacaliente int,
+@aguatanque int,
+@cable int,
+
+@viviendasatelital int,
+@otrotvpaga varchar,
+@internet bit,
+@tipoconeccion int,
+
+@otrotipoconeccion varchar,
+
+@router bit
  );
  create table t_separa_basura (
-	id_basra int foreign key references t_basura(id_basra),
+	id_basra int foreign key references t_basura(id_basura),
 	id_vivienda int foreign key references t_vivienda(id_vivienda)
 );
  create table t_tiene (
@@ -125,10 +194,13 @@ create t_energia_cosina(
 	relacion varchar(20)
  );
 
- create table t_tipo_vivienda(
-	id_tipo_vivienda int primary key,
-	tipo_vivienda  varchar (20)
- );
+
+
+
+
+
+
+
  go
  create table t_solicitud_bono(
 	id_solicitud_bono int primary key,
