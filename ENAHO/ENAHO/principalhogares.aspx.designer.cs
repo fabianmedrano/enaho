@@ -58,13 +58,22 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_numero_personas_otra_vivienda;
         
         /// <summary>
-        /// Control rb_personas_viviendo_otra_parte.
+        /// Control rb_alguna_personas_viviendo_otra_parte.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rb_personas_viviendo_otra_parte;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_alguna_personas_viviendo_otra_parte;
+        
+        /// <summary>
+        /// Control row_personas_ausentes_menos_6_meses.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_personas_ausentes_menos_6_meses;
         
         /// <summary>
         /// Control rb_personas_ausentes_menos_6_meses.
@@ -130,15 +139,6 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.RadioButtonList rb_alquilan_carto;
         
         /// <summary>
-        /// Control row_servico_domestico.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_servico_domestico;
-        
-        /// <summary>
         /// Control tb_servicio_domestico_cuanto.
         /// </summary>
         /// <remarks>
@@ -148,31 +148,31 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_servicio_domestico_cuanto;
         
         /// <summary>
-        /// Control TextBox1.
+        /// Control tb_cuartos_alquila.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox tb_cuartos_alquila;
         
         /// <summary>
-        /// Control RadioButtonList1.
+        /// Control rb_resibido_bono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_resibido_bono;
         
         /// <summary>
-        /// Control Div3.
+        /// Control row_ano_bono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_ano_bono;
         
         /// <summary>
         /// Control tb_ano_bono.
@@ -184,57 +184,57 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.TextBox tb_ano_bono;
         
         /// <summary>
-        /// Control RadioButtonList2.
+        /// Control rb_tipo_bono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList2;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_tipo_bono;
         
         /// <summary>
-        /// Control RadioButtonList3.
+        /// Control rb_solicitud_bono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList3;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_solicitud_bono;
         
         /// <summary>
-        /// Control RadioButtonList4.
+        /// Control rb_razon_no_recibir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList4;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_razon_no_recibir;
         
         /// <summary>
-        /// Control TextBox2.
+        /// Control tb_especifique_no_resibir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox tb_especifique_no_resibir;
         
         /// <summary>
-        /// Control RadioButtonList5.
+        /// Control rb_razon_no_solicitar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList5;
+        protected global::System.Web.UI.WebControls.RadioButtonList rb_razon_no_solicitar;
         
         /// <summary>
-        /// Control TextBox3.
+        /// Control tb_razon_no_solicitar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox tb_razon_no_solicitar;
     }
 }

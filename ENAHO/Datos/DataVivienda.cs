@@ -10,7 +10,7 @@ namespace Datos
 {
     public class DataVivienda
     {
-        #region InsertarEmpleado
+       
 
         public int InsertarVivienda(Vivienda vivienda)// areglar
         {
@@ -134,7 +134,7 @@ namespace Datos
                   
             return idVivienda ;
         }
-        #endregion
+        
     
 
     }

@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery.mask.min.js"></script>
     <script src="Scripts/principal.js"></script>
     <script src="Scripts/mascaras.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -50,7 +51,7 @@
                             <div class="form-group">
                                 <div class=" row">
                                     <label class="control-label col-md-3">Direccion:</label>
-                                    <asp:TextBox runat="server" ID="tb_direccion"  CssClass="col-md-7 right top form-control"></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="tb_direccion"  CssClass="col-md-7 right top form-control alfanumerico"></asp:TextBox>
                                 </div><!-- direccion-->
                                 <div class=" row">
                                     <label class="control-label col-md-3">Telefono:</label>
