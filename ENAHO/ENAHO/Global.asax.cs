@@ -15,7 +15,10 @@ namespace ENAHO
         void Application_Start(object sender, EventArgs e)
         {
 
-            Application["idVivienda"] = 0 ;
+            Application["idVivienda"] = 0+"" ;
+            Application["idhogar"] = 0 + "";
+            // List<Hogar> hogares = new List<Hogar>();
+            Application["PersonasHogar"] = new List<Persona>();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

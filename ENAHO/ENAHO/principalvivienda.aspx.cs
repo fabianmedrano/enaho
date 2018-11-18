@@ -81,7 +81,7 @@ namespace ENAHO
             if (ValidarCampos())
             {
                 Guardar_datos();
-                string script = "alert('faltan campos que llenar')"; ;
+                string script = "alert('Datos guardados exitosamente')"; ;
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
                 Response.Redirect("principalhogares.aspx");
             }
@@ -346,7 +346,7 @@ namespace ENAHO
             }
 
 
-            Application["idVivienda"]  = new DataVivienda().InsertarVivienda(vivienda);
+            Application["idVivienda"]  = new DataVivienda().InsertarVivienda(vivienda)+"";
             return true;
         }
         public bool ValidarCampos()
@@ -372,33 +372,49 @@ namespace ENAHO
                 return validos ;
             }
 
-           /* rb_mgch
+            if (rb_mgch.SelectedValue.ToString().Equals("") ||
+                rb_cielo_raso.SelectedValue.ToString().Equals("")||
+                rb_sobre_pilotes.SelectedValue.ToString().Equals("") ||
+                rb_estado_paredes.SelectedValue.ToString().Equals("") ||
+                rb_estado_techo.SelectedValue.ToString().Equals("") ||
+                rb_estado_piso.SelectedValue.ToString().Equals("") ||
+                rb_abastecimiento_agua.SelectedValue.ToString().Equals("") ||
+                rb_cantidad_metros.SelectedValue.ToString().Equals("") 
 
-                rb_cielo_raso
-                rb_sobre_pilotes
-                rb_estado_paredes
-                rb_estado_techo
-                rb_estado_piso
-                rb_abastecimiento_agua
-                rb_cantidad_metros
-                rb_servicio_sanitario_es
-                rb_uso_bano
+                )
+            {
+                validos = false;
+                return validos;
+
+            }
+
+            /* rb_mgch
+
+                 rb_cielo_raso
+                 rb_sobre_pilotes
+                 rb_estado_paredes
+                 rb_estado_techo
+                 rb_estado_piso
+                 rb_abastecimiento_agua
+                 rb_cantidad_metros
+                 rb_servicio_sanitario_es
+                 rb_uso_bano
 
 
-                rb_separacion_organica
-                rb_separacion_plastico
-                rb_separacion_vidrio
-                rb_separacion_alminio
-                rb_separacion_papel
-                rb_separacion_otro
-                rb_refrigeradora
-                agua_caliente
-                rb_tanque_agua
-                rb_televisor_cable
-                rb_satelital
-                rb_otro_tipo_paga
+                 rb_separacion_organica
+                 rb_separacion_plastico
+                 rb_separacion_vidrio
+                 rb_separacion_alminio
+                 rb_separacion_papel
+                 rb_separacion_otro
+                 rb_refrigeradora
+                 agua_caliente
+                 rb_tanque_agua
+                 rb_televisor_cable
+                 rb_satelital
+                 rb_otro_tipo_paga
 
-            */
+             */
 
             if (rb_mismo_prespuesto.SelectedValue.ToString().Equals("false"))
             {

@@ -72,3 +72,17 @@ hr {
     padding-bottom:10px;
     padding-top:10px;
 }
+
+
+#ModalHogares {
+    overflow-x: scroll;
+    width:auto;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    width: 25%;
+}

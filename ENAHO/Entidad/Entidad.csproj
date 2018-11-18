@@ -44,10 +44,12 @@
     <Compile Include="Canton.cs" />
     <Compile Include="Distrito.cs" />
     <Compile Include="Hogar.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Vivienda.cs" />
+    <Compile Include="viviendamuestra.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

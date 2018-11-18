@@ -6,7 +6,4 @@ $(document).ready(function () {
     $(".fecha").mask("9999");
     $(".cantidad").mask("99");
 
-    $(".alfanumerico").mask(
-        'ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ',
-        { translation: { 'Z': { pattern: /[a-zA-Z0-9\s]/, recursive: true } } });
 });

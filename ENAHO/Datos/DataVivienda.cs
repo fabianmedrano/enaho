@@ -1,6 +1,7 @@
 ﻿using Entidad;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -134,8 +135,76 @@ namespace Datos
                   
             return idVivienda ;
         }
-        
-    
 
+
+
+        public List<viviendamuestra> ListadoVivienda()
+        {
+            List<viviendamuestra> LISTA = new List<viviendamuestra>();
+            SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
+            command.CommandText = "paSeleccionaViviendaMuestra";
+            command.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                command.Connection.Open();
+                SqlDataReader RESULTADO = command.ExecuteReader();
+
+                while (RESULTADO.Read())
+                {
+                    viviendamuestra c = new viviendamuestra();
+            
+                    c.Id_vivienda = Convert.ToInt16(RESULTADO["id"]);
+                    c.DisIDDistrito1 = (RESULTADO["idDistrito"]).ToString();
+                    c.Direccion =(RESULTADO["direccion"]).ToString();
+                    c.Telefono = (RESULTADO["telefono"]).ToString();
+                    c.Modulo_GCH1 = Convert.ToBoolean (RESULTADO["modulo"]);
+                    c.Numero_personas_vivienda = Convert.ToInt16(RESULTADO["numeropersonas"]);
+                    c.Numero_hogares_vivienda = Convert.ToInt16(RESULTADO["numerohogares"]);
+                    c.Tipo_vivienda = (RESULTADO["tipo"]).ToString();
+                    LISTA.Add(c);
+                }
+              
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (command.Connection.State == System.Data.ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+                command.Dispose();
+            }
+            return LISTA;
+        }
+
+        public Boolean eliminar(int idVivienda) {
+            List<viviendamuestra> LISTA = new List<viviendamuestra>();
+            SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
+            command.CommandText = "paEliminarVivienda";
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add(new SqlParameter("@idVivienda", idVivienda));
+            try
+            {
+                command.Connection.Open();
+                command.ExecuteReader();
+
+            }
+            catch  (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (command.Connection.State == System.Data.ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+                command.Dispose();
+            }
+            return true;
+        }
     }
 }

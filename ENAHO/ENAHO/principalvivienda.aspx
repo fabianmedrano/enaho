@@ -7,10 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/jquery.mask.min.js"></script>
+    <!--<script src="Scripts/acordeon.js"></script>-->
     <script src="Scripts/principal.js"></script>
     <script src="Scripts/mascaras.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/principal.css" rel="stylesheet" />
+   <!-- <link href="Content/acordeon.css" rel="stylesheet" /> --->
     <title>ENAHO</title>
 </head>
 <body>
@@ -21,10 +23,10 @@
             <!------------------------------------------------------------------------------------------------------------------>
 
             <div class="panel panel-default  ">
-                <div class="panel-heading">
+                <div class="panel-heading accordion">
                     Informacion de vivienda
                 </div>
-                <div class="panel-body">
+                <div class="panel-body contenido">
                         <div class="col-md-5 left">
                             <div class="form-group">
                              <!--   <div class=" row">
@@ -124,7 +126,7 @@
 
                             <div class=" row" runat="server" id="row_especificar_tipo_vivienda">
                                 <label class="control-label col-md-5">Especifique:</label>
-                                 <asp:TextBox runat="server" ID="tb_espeficar_tipo_vivienda"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_espeficar_tipo_vivienda"  CssClass="col-md-7 right top form-control " > </asp:TextBox>
                             </div><!-- especificar tipo de vivienda -->
                               <hr />
 
@@ -290,7 +292,7 @@
                         <div class="form-group">
                             <div class=" row" runat="server" id="Div1">
                                 <label class="control-label col-md-5"> ¿Cuántos cuartos exclusivos para dormir tiene esta vivienda?</label>
-                                 <asp:TextBox runat="server" ID="tb_cuartos_dormir"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_cuartos_dormir"  CssClass="col-md-7 right top form-control cantidad" > </asp:TextBox>
                             </div><!-- especificar tipo de vivienda -->
                         </div>
                             <!------------------------------------------------------------------------------------------------------------------>
@@ -299,7 +301,7 @@
                         <div class="form-group">
                             <div class=" row" runat="server" id="Div2">
                                 <label class="control-label col-md-13">Sin contar baños, cuarto de pilas, pasillos, garaje, ¿cuántos aposentos, en total (incluso Nº de cuartos) tiene esta vivienda?</label>
-                                 <asp:TextBox runat="server" ID="tb_aposentos"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_aposentos"  CssClass="col-md-7 right top form-control cantidad" > </asp:TextBox>
                             </div><!-- especificar tipo de vivienda -->
                         </div>
                             <!------------------------------------------------------------------------------------------------------------------>
@@ -366,7 +368,7 @@
                                     <asp:ListItem Text="conectado a tanque séptico?" Value="2" />
                                     <asp:ListItem Text="conectado a tanque séptico con tratamiento (fosa biológica)?" Value="3" />
                                     <asp:ListItem Text="de hueco, pozo negro o letrina?" Value="4" />
-                                    <asp:ListItem Text="No tiene" Value="0" />
+                                    <asp:ListItem Text="No tiene" Value="5" />
                                     <asp:ListItem Text="con otro sistema?" Value="OTRO" />
                                    
                                 </asp:RadioButtonList>
@@ -401,7 +403,7 @@
                             </div><!-- material techo -->
                             <div class=" row" runat="server" id="row_tiene_banos">
                                 <label class="control-label col-md-5">Cuantos:</label>
-                                 <asp:TextBox runat="server" ID="tb_tiene_banos"  CssClass="col-md-7 right top form-control" > </asp:TextBox>
+                                 <asp:TextBox runat="server" ID="tb_tiene_banos"  CssClass="col-md-7 right top form-control cantidad" > </asp:TextBox>
                             </div><!-- especificar tipo de vivienda -->
                         </div>
                         
@@ -428,7 +430,7 @@
                                     <asp:ListItem Text="de la ESPH / JASEC?" Value="3" />
                                     <asp:ListItem Text="de una Cooperativa?" Value="4" />
                                     <asp:ListItem Text="de planta privada?" Value="5" />
-                                    <asp:ListItem Text="No hay luz eléctrica" Value="0" />
+                                    <asp:ListItem Text="No hay luz eléctrica" Value="6" />
                                     <asp:ListItem Text="de otra fuente?" Value="OTRO" />
                                    
                                 </asp:RadioButtonList>
@@ -447,7 +449,7 @@
                                     <asp:ListItem Text="Electricidad" Value="1" />
                                     <asp:ListItem Text="Gas" Value="2" />
                                     <asp:ListItem Text="Leña o carbón" Value="3" />
-                                    <asp:ListItem Text="Ninguno (no cocina)" Value="0" />
+                                    <asp:ListItem Text="Ninguno (no cocina)" Value="4" />
                                     <asp:ListItem Text="Otro" Value="OTRO" />
                                    
                                 </asp:RadioButtonList>
@@ -552,7 +554,7 @@
                                         <asp:ListItem Text="Si" Value="true" />
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="tb_cantidad_telefonos" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_cantidad_telefonos" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                             
                                  <div class="col-md-4 box">
@@ -561,7 +563,7 @@
                                         <asp:ListItem Text="Si" Value="true" />
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="tb_telefono_recidencia_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_telefono_recidencia_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                                 
                      
@@ -572,7 +574,7 @@
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
                                      
-                                     <asp:TextBox runat="server" ID="tb_pc_portatil_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_pc_portatil_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                                 
                             </div>
@@ -583,7 +585,7 @@
                                         <asp:ListItem Text="Si" Value="true" />
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="tb_pc_escritorio_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_pc_escritorio_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                             
                                  <div class="col-md-4 box">
@@ -592,7 +594,7 @@
                                         <asp:ListItem Text="Si" Value="true" />
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="tb_tableta_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_tableta_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                                 
                      
@@ -603,7 +605,7 @@
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
                                      
-                                     <asp:TextBox runat="server" ID="tb_fax_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_fax_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                             </div>
                             <div class=" row"><!---fila 3--->
@@ -613,7 +615,7 @@
                                         <asp:ListItem Text="Si" Value="true" />
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="tb_radio_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_radio_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                             
                                  <div class="col-md-4 box">
@@ -622,7 +624,7 @@
                                         <asp:ListItem Text="Si" Value="true" />
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="tb_carro_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_carro_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                                 
                      
@@ -633,7 +635,7 @@
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
                                      
-                                     <asp:TextBox runat="server" ID="tb_moto_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_moto_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                             </div>
                             <div class=" row"><!---fila 4- por aq-->
@@ -643,7 +645,7 @@
                                         <asp:ListItem Text="Si" Value="true" />
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="tb_tv_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_tv_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
                             
                                  <div class="col-md-4 box">
@@ -652,7 +654,7 @@
                                         <asp:ListItem Text="Si" Value="true" />
                                         <asp:ListItem Text="No" Value="false" />
                                     </asp:RadioButtonList>
-                                     <asp:TextBox runat="server" ID="tb_tv_convencional_cantidad" CssClass="col-md-7 right top form-control" ></asp:TextBox>
+                                     <asp:TextBox runat="server" ID="tb_tv_convencional_cantidad" CssClass="col-md-7 right top form-control cantidad" ></asp:TextBox>
                                  </div>
 
                             </div>

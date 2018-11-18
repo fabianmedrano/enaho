@@ -44,6 +44,7 @@
     <Compile Include="ClsPcdLN.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DataHogar.cs" />
+    <Compile Include="DataPersona.cs" />
     <Compile Include="DataVivienda.cs" />
     <Compile Include="PCD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

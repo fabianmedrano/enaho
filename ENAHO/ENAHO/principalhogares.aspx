@@ -8,6 +8,7 @@
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/principal.js"></script>
      <script src="Scripts/Hogares.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
    
     <link href="Content/principal.css" rel="stylesheet" />
@@ -16,25 +17,26 @@
 </head>
 <body>
     <form id="form" runat="server">
-       
+  <!--     
   <nav class="navbar navbar-inverse" style="margin-top:initial"  role="navigation">
  
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Inicio</a>
+      <a class="navbar-brand" href="/menu.aspx">Inicio</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+  
     <div class="collapse navbar-collapse ">
       <ul class="nav navbar-nav">
-        <li><a href="#">Agregar Hogar</a></li>
-        <li><a href="#">Lista de  Hogares</a></li>
+        <li><a href="principalhogares.aspx">Nuevo Hogar</a></li>
+        
+          <li> <a href="#" data-toggle="modal" data-target="#ModalHogares">Lista Hogares</a></li>
+         
       </ul>
     </div>
   </nav>
-
+        -->
         <div class="col-md-7 center-block ">
             
-        <!------------------------------------------------------------------------------------------------------------------>
         <!-----------------------------------------------------PARA CADA HOGAR------------------------------------------------------------->
             <div class="panel panel-default  "><!-- VIV3 -->
              <!---   <div class="panel-heading">
@@ -187,14 +189,46 @@
                             </div>
                         </div>
                      </div>
+                    
                 </div>
             
                 <div class="panel-footer" >
-                    <asp:Button runat="server" Text="Siguiente" CssClass=" btn btn-primary " OnClick="btn_siguiente_hogares" />
+                    <!---<asp:Button runat="server" Text="Guardar" CssClass=" btn btn-primary " OnClick="btn_siguiente_hogares" /> ---->
+                    <asp:Button runat="server" Text="Terminar" CssClass=" btn btn-primary right " OnClick="btn_terminar" />
                 </div>
             </div>
                <!-------------------------------------------------------------------------------------------------------------->
         </div><!--  contenedor principal-->
+
+        <!-----------------MODAL-------------------->
+        <!---
+  <div id="ModalHogares" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Hogares de Vivienda</h4>
+          </div>
+          <div class="modal-body">
+
+
+              <asp:GridView ID="gb_hogares"  CssClass="table table-bordered" runat="server">
+              </asp:GridView>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class=" btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        --->
+
+
+
+
+
+ <!--------------MODAL----------------------->
+
+
     </form>
 </body>
 </html>

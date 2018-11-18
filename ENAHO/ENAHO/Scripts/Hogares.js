@@ -1,5 +1,17 @@
 ﻿
 $(document).ready(function () {
+
+    
+
+    $('a[href="#listaHogares"]').click(function () {
+        $('#ModalHogares').show(true);
+        $('#ModalHogares').modal({
+            show: 'false'
+        }); 
+        alert('Sign new href executed.');
+    }); 
+
+
         if ($("#rb_6_aqui_vivienda input:checked").val() == "false") {
 
         $("#row_tienen_tro_lugar").show();

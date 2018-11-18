@@ -15,13 +15,7 @@
        <form id="form" runat="server">
 
         <div class="col-md-7 center-block ">
-            
-        <!------------------------------------------------------------------------------------------------------------------>
-        <!-----------------------------------------------------PARA CADA HOGAR------------------------------------------------------------->
-            <div class="panel panel-default  "><!-- VIV3 -->
-             <!---   <div class="panel-heading">
-                    Vivienda y servicios
-                </div>  -->
+          <div class="panel panel-default  "><!-- VIV3 -->
                 <div class="panel-body">
                     <div class=" page-header">Persona miembro del hogar</div>
                     <div class="col-md-12 left">
@@ -87,20 +81,66 @@
                                     <label class="control-label col-md-3">Distrito:</label>
                                     <asp:DropDownList runat="server" ID="ddl_distrito"  CssClass="col-md-7 right top form-control DDL" AutoPostBack="True" ></asp:DropDownList>
                                 </div><!-- distrito-->
+
+                                <div class=" row">
+                                    <label class="control-label col-md-5">Estado conyugal:</label>
+                                     <asp:RadioButtonList runat="server" ID="RadioButtonList1"  CssClass="col-md-7 right ">
+                                    <asp:ListItem Text="Si" Value="true" />
+                                    <asp:ListItem Text="No" Value="false" />
+                                </asp:RadioButtonList>
+                            </div>
+                            <div class=" row">
+                                    <label class="control-label col-md-5">¿Qué tipo de Seguro Social, tiene?:</label>
+                                     <asp:RadioButtonList runat="server" ID="RadioButtonList2"  CssClass="col-md-7 right ">
+                                    <asp:ListItem Text="Si" Value="true" />
+                                    <asp:ListItem Text="No" Value="false" />
+                                </asp:RadioButtonList>
+                            </div>
+                            <div class=" row">
+                                 <label class="control-label col-md-5"> presenta alguna limitación que le dificulte o impida permanentemente:</label>
+                                <asp:CheckBoxList ID="CheckBoxList1" runat="server"   CssClass="col-md-7 right ">
+                                    <asp:ListItem>ver aún con los</asp:ListItem>
+                                    <asp:ListItem>ver aún con los</asp:ListItem>
+                                </asp:CheckBoxList>
+                            </div>
                         </div>
                             <!---- cierre seccion de salto otro lugar y no habitual--------->
              
                       
                     
-                </div><!--  panel body  -->
+            </div><!--  panel body  -->
                 <div class="panel-footer" >
                     <asp:Button runat="server" Text="Siguiente" CssClass=" btn btn-primary "
                         />
+                    
                 </div>
             </div>
             <!------------------------------------------------------------------------------------------------------------------>
-          
-        </div><!--  contenedor principal-->
+          </div>
+        </div>
+
+                 <!-----------------MODAL-------------------->
+       
+        <div id="ModalHogares" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Hogares de Vivienda</h4>
+                    </div>
+                    <div class="modal-body">
+
+                            <asp:GridView ID="gb_personas"  CssClass="table table-bordered" runat="server">
+                            </asp:GridView>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class=" btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+           </div>
+        </div>
+
     </form>
 </body>
 </html>
