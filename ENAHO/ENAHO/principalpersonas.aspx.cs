@@ -15,25 +15,22 @@ namespace ENAHO
     {
      
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
+        protected void Page_Load(object sender, EventArgs e){
             if (!IsPostBack)
             {
-                //   if(Session["HogaresVivienda"] != null ) {
+                //  if(Session["HogaresVivienda"] != null ) {
                 // Application["HogaresVivienda"] = new List<Hogar>();
                 RefrescarGrid(Application["PersonasHogar"] as List<Persona>);
             }
-
         }
 
-        public static DataTable  ToDataTable<T>( List<T> items)
-        {
+
+
+        public static DataTable  ToDataTable<T>( List<T> items){
             DataTable dataTable =   new DataTable  ( typeof (T).Name);
-            //Get all the properties
             PropertyInfo [] Props = typeof (T).GetProperties(  BindingFlags.Public | BindingFlags.Instance);
             foreach( PropertyInfo   prop   in    Props)
             {
-                //Setting column names as Property names
                 dataTable.Columns.Add(prop.Name);
             }
             foreach (T item in items)
@@ -41,31 +38,36 @@ namespace ENAHO
                 var values =  new object [Props.Length];
                 for (  int i = 0; i < Props.Length; i++)
                 {
-                    //inserting property values to datatable rows
                     values[i] = Props[i].GetValue(item,  null );
                 }
                 dataTable.Rows.Add(values);
             }
-            //put a breakpoint here and check datatable
             return
                 dataTable;
         }
-        private  void  RefrescarGrid(List   < Persona> listaDetalle) {
-            DataTable table = ToDataTable(listaDetalle);
+
+
+
+        private  void  RefrescarGrid(List<Persona> lista) {
+            DataTable table = ToDataTable(lista);
             gb_personas.DataSource = table;
             gb_personas.DataBind();
             table =  null  ;
         }
-            
+        
+
+
         protected void btn_siguiente_hogares(object sender, EventArgs e)
         {
-
-
+            (Application["PersonasHogar"] as List<Persona>).Add(guardarPersona());
         }
+
+
+
         protected void btn_terminar(object sender, EventArgs e)
         {
-               
-
+            new DataPersona().insertarPersonas( Application["PersonasHogar"] as List<Persona> , Convert.ToInt32(Application["idHogar"] as String));
+/*
             if (new DataPersona().insertarPersonas(guardarPersona(), Convert.ToInt32(Application["idHogar"] as String)))
             {
                 string script = "alert('Datos guardados exitosamente')"; ;
@@ -76,26 +78,8 @@ namespace ENAHO
             {
                 string script = "alert('Error al guardar los datos')"; ;
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-            }
-
+            } */
         }
-        private Persona guardarPersona()
-        {
-            Persona persona = new Persona();
-             
-
-            return persona;
-        }
-
-        private bool validar()
-        {
-            bool validos = false;
-
-              
-            return validos;
-        }
-       
-        
 
 
         protected void ddl_Provincia_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,5 +90,23 @@ namespace ENAHO
         {
             //LlenarComboDistrito();
         }
+
+        private Persona guardarPersona()
+        {
+            Persona persona = new Persona();
+            
+            return persona;
+        }
+
+
+
+        private bool validar()
+        {
+            bool validos = false;
+            
+            return validos;
+        }
+
+
     }
 }

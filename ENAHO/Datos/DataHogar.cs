@@ -12,9 +12,9 @@ namespace Datos
     public class DataHogar
     {
 
-        public Boolean insertarHogar(Hogar hogar, int idvivienda)// areglar
+        public int insertarHogar(Hogar hogar, int idvivienda)// areglar
         {
-
+            int idHogar = 0;
             SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
             try
             {
@@ -49,8 +49,15 @@ namespace Datos
                 command.Parameters.Add(new SqlParameter("@Otro_razon_no_solicitar", hogar.Otro_razon_no_solicitar));
 
                 command.Connection.Open();
-                command.ExecuteNonQuery();
-                return true;
+                SqlDataReader RESULTADO = command.ExecuteReader();
+                /////////////////////////////////
+
+                while (RESULTADO.Read())
+                {
+                    idHogar = Convert.ToInt32(RESULTADO["id"].ToString());
+
+                }
+               
             }
             catch (Exception ex)
             {
@@ -65,6 +72,7 @@ namespace Datos
                 }
                 command.Dispose();
             }
+            return idHogar;
         }
 
 

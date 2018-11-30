@@ -61,20 +61,21 @@ namespace ENAHO
         {
 
 
+            /*
+                        if (new DataHogar().insertarHogar(guardarHogar(), Convert.ToInt32(Application["idVivienda"] as String)))
+                        {
+                            string script = "alert('Datos guardados exitosamente')"; ;
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
 
-            if (new DataHogar().insertarHogar(guardarHogar(), Convert.ToInt32(Application["idVivienda"] as String)))
-            {
-                string script = "alert('Datos guardados exitosamente')"; ;
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                            Response.Redirect("principalpersonas.aspx");
 
-                Response.Redirect("principalpersonas.aspx");
 
-            }
-            else {
-                string script = "alert('Error al guardar los datos')"; ;
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
-            }
-
+                        }
+                        else {
+                            string script = "alert('Error al guardar los datos')"; ;
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+                        }
+                         */
             //   (Application["HogaresVivienda"] as List<Hogar>).Add(guardarHogar());
             //  RefrescarGrid((Application["HogaresVivienda"] as List<Hogar>));
             // Response.Redirect("/principalhogares.aspx");
@@ -85,9 +86,11 @@ namespace ENAHO
         }
         protected void btn_terminar(object sender, EventArgs e)
         {
-            Application["idhogar"] = "" + new DataHogar().insertarHogar(guardarHogar(), Convert.ToInt32(Application["idVivienda"] as String));
 
-            if ((Application["idhogar"] as string).Equals("0"))
+            Application["idhogar"] = "" + new DataHogar().insertarHogar(guardarHogar(),20/* Convert.ToInt32(Application["idVivienda"] as String)*/);
+
+
+            if (!(Application["idhogar"] as string).Equals("0"))
             {
                 string script = "alert('Datos guardados exitosamente')"; ;
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);

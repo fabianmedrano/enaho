@@ -9,7 +9,7 @@ namespace Datos
 {
     public class DataPersona
     {
-        public bool insertarPersonas(Persona persona, int idHogar)
+        public bool insertarPersonas(List<Persona> persona, int idHogar)
         {
             throw new NotImplementedException();
         }
