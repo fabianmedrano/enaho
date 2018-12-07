@@ -37,7 +37,7 @@
                                         <span aria-hidden="true" class="glyphicon glyphicon-user"></span>
                                     </div>
                                     <div class="row">
-                                        Usuarios
+                                        Registros
                                     </div>
                                 </div>
                             </asp:LinkButton>

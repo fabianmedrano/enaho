@@ -9,6 +9,7 @@
 
 .center-block {
     float: none;
+    margin-top: 20px;
 }
 .row {
     margin-bottom:5px;
@@ -26,13 +27,14 @@
     background-color: #286090;
     border-radius: inherit;
     color: white;
-    /*margin-top: 20px;*/
+    margin-top: 0px;
 }
 
 .panel {
     background-color: none;
-    border-color:#286090;
-    border-radius:initial;
+    border-color: #286090;
+    border-radius: initial;
+    /*margin-top: 20px;*/
 }
 
 .form-control {
@@ -74,15 +76,34 @@ hr {
 }
 
 
-#ModalHogares {
-    overflow-x: scroll;
-    width:auto;
-}
+
 
 table {
     width: 100%;
 }
 
 th, td {
-    width: 25%;
+    width: auto;
+}
+
+
+#Modalpersonas {
+    overflow-x: scroll;
+    width: auto;
+    overflow-y: scroll;
+    /* 
+         
+   
+    margin:initial;
+    padding:initial;
+
+    */
+}
+
+
+#btn_lista_hogares {
+   border:inherit;
+   width:inherit;
+   color:inherit;
+   background-color:inherit;
 }

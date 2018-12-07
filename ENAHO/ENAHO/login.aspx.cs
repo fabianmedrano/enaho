@@ -27,7 +27,7 @@ namespace ENAHO
                 }
                 else {
                     if (ValidarUsuario(tb_usuario.Text.ToString(), tb_pass.Text.ToString())) {
-                        Session["Login"] = new Usuario(tb_usuario.Text.ToString(), tb_pass.Text.ToString()) ;
+                       // Session["Login"] = new Usuario(tb_usuario.Text.ToString(), tb_pass.Text.ToString()) ;
                         Response.Redirect("menu.aspx");
                     } else {
                         l_login.Text = "Error en los datos";
@@ -57,7 +57,7 @@ namespace ENAHO
                 SqlDataReader RESULTADO = ((SqlDataReader)command.ExecuteReader());
                 if (RESULTADO.Read()) {
                     encontrado = true;
-//
+                    Session["Login"] = new Usuario(tb_usuario.Text.ToString(), tb_pass.Text.ToString(), Convert.ToInt32(RESULTADO["id_entrevistador"]));
                 }
             }
             catch (Exception ex){

@@ -103,22 +103,22 @@ namespace ENAHO {
         protected global::System.Web.UI.WebControls.DropDownList ddl_distrito;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control ddl_estadoConyugal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_estadoConyugal;
         
         /// <summary>
-        /// Control DropDownList2.
+        /// Control ddl_tipo_seguro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_tipo_seguro;
         
         /// <summary>
         /// Control CheckBoxList1.

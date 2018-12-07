@@ -8,7 +8,7 @@ namespace Entidad
 {
     public class Hogar
     {
-
+        private int id;
         private Boolean personas_mas_seis_meses;
         private Boolean personas_otro_lugar_donde_vivir;
         private int cantidad_personas_otro_lugar;
@@ -40,6 +40,7 @@ namespace Entidad
 
         public Hogar()
         {
+            this.id = 0;
             this.personas_mas_seis_meses = false;
             this.personas_otro_lugar_donde_vivir = false;
             this.cantidad_personas_otro_lugar = 0;
@@ -58,7 +59,7 @@ namespace Entidad
             this.razon_no_solicitar = 0;
             this.otro_razon_no_solicitar = "nada";
         }
-
+        public int Id { get => id; set => id = value; }
         public bool Personas_mas_seis_meses { get => personas_mas_seis_meses; set => personas_mas_seis_meses = value; }
         public bool Personas_otro_lugar_donde_vivir { get => personas_otro_lugar_donde_vivir; set => personas_otro_lugar_donde_vivir = value; }
         public int Cantidad_personas_otro_lugar { get => cantidad_personas_otro_lugar; set => cantidad_personas_otro_lugar = value; }

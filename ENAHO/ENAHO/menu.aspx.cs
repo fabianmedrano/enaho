@@ -31,13 +31,13 @@ namespace ENAHO
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("usuario.aspx");
-         //   Response.Redirect("usuarios.aspx");
+            Response.Redirect("listvivienda.aspx");
+         //   Response.Redirect("usuarios.aspx");C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\ENAHO\listvivienda.aspx
         }
 
         protected void Unnamed3_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("reportsimple.aspx");
         }
     }
 }

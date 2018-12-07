@@ -20,9 +20,9 @@
                 </div>
                 <div class="panel-body contenido">
 
-                    <asp:GridView ID="gb_list_viviendas" CssClass=" " runat="server">
+                    <asp:GridView ID="gb_list_viviendas" CssClass=" " runat="server" OnSelectedIndexChanged="gb_list_viviendas_SelectedIndexChanged" OnRowDeleting="gb_list_viviendas_RowDeleting">
                         <Columns>
-                            <asp:ButtonField ButtonType="Button" CommandName="Delete" HeaderText="Eliminar" ShowHeader="True" Text="Eliminar" />
+                            <asp:ButtonField ButtonType="Button" CommandName="Delete" HeaderText="Eliminar" ShowHeader="True" Text="Eliminar"  />
                             <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Seleccionar" ShowHeader="True" Text="Seleccionar" />
                         </Columns>
                     </asp:GridView>

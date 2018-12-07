@@ -8,11 +8,33 @@
         <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/principal.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/principal.css" rel="stylesheet" />
+    <link href="Content/nav.css" rel="stylesheet" />
+    <script src="Scripts/nav.js"></script>
     <title>ENAHO</title>
 </head>
 <body>
        <form id="form" runat="server">
+
+           <div id="sidebar-wrapper">
+            <nav id="spy">
+                <ul class="sidebar-nav nav">
+                    <li class="sidebar-brand">
+                        <a href="principalhogares.aspx"><span class="fa fa-home solo">Home</span></a>
+                    </li>
+                    <li class="">
+                       
+                            <a href="#" data-toggle="modal" data-target="#Modalpersonas">Lista Hogares</a>
+                        
+                    </li>
+                    <li class="active">
+                            <a href="principalpersonas.aspx">Nuevo Hogar</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
 
         <div class="col-md-7 center-block ">
           <div class="panel panel-default  "><!-- VIV3 -->
@@ -101,7 +123,7 @@
 
                                 <div class=" row">
                                     <label class="control-label col-md-5">Estado conyugal:</label>
-                                    <asp:DropDownList runat="server" ID="DropDownList1"  CssClass=" right top form-control   DDL col-md-5" >
+                                    <asp:DropDownList runat="server" ID="ddl_estadoConyugal"  CssClass=" right top form-control   DDL col-md-5" >
                                         <asp:ListItem Text="En unión libre o Juntado(a)" Value="1" />
                                         <asp:ListItem Text="Casado (a)" Value="2" />
                                         <asp:ListItem Text="Divorciado(a)" Value="3" />
@@ -113,7 +135,7 @@
                                 </div>
                             <div class=" row">
                                     <label class="control-label col-md-5">¿Qué tipo de Seguro Social, tiene?:</label>
-                                    <asp:DropDownList runat="server" ID="DropDownList2"  CssClass=" right top form-control   DDL col-md-5" >
+                                    <asp:DropDownList runat="server" ID="ddl_tipo_seguro"  CssClass=" right top form-control   DDL col-md-5" >
                                         <asp:ListItem Text="Asalariado" Value="1" />
                                         <asp:ListItem Text="Mediante convenio,(asociaciones, sindicatos cooperativas,etc)" Value="2" />
                                       <asp:ListItem Text="Voluntario" Value="13" />
@@ -131,7 +153,7 @@
                                         <asp:ListItem Text="No asegurado" Value="3" />
                                     </asp:DropDownList>
                             </div>
-                            <div class=" row">
+                           <!-- <div class=" row">
                                  <label class="control-label col-md-5"> presenta alguna limitación que le dificulte o impida permanentemente:</label>
                                 <asp:CheckBoxList ID="CheckBoxList1" runat="server"   CssClass="col-md-7 right ">
                                     <asp:ListItem Text="ver aún con los anteojos o lentes puestos?" Value="1"></asp:ListItem>
@@ -142,7 +164,7 @@
                                       <asp:ListItem Text="de tipo intelectual? (retardo, Síndrome de Down, otros)" Value="6"></asp:ListItem>
                                      <asp:ListItem Text="de tipo mental? (bipolar, esquizofrenia, otros)?" Value="7"></asp:ListItem>
                                 </asp:CheckBoxList>
-                            </div>
+                            </div>-->
                         </div>
                             <!---- cierre seccion de salto otro lugar y no habitual--------->
              
@@ -150,7 +172,9 @@
                     
             </div><!--  panel body  -->
                 <div class="panel-footer" >
-                    <asp:Button runat="server" Text="Siguiente" CssClass=" btn btn-primary "
+                    <asp:Button runat="server" Text="Siguiente" CssClass=" btn btn-primary " OnClick="Unnamed1_Click"
+                        />
+                     <asp:Button runat="server" Text="Terminar" CssClass=" btn btn-primary left" OnClick="Unnamed2_Click" 
                         />
                     
                 </div>
@@ -161,7 +185,7 @@
 
                  <!-----------------MODAL-------------------->
        
-        <div id="ModalHogares" class="modal fade" role="dialog">
+        <div id="Modalpersonas" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <div class="modal-content">

@@ -2,6 +2,7 @@
 using Entidad;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -134,17 +135,17 @@ namespace ENAHO
                 vivienda.Esta_vivienda = Convert.ToInt16(rb_esta_vivienda.SelectedValue.ToString());
                 if (vivienda.Esta_vivienda == 2 || vivienda.Esta_vivienda == 3)
                 {
-                    vivienda.Mesulaidad_vivienda = Convert.ToInt32( tb_mensualidad.Text.ToString().Trim());
+                    vivienda.Mesulaidad_vivienda = float.Parse( tb_mensualidad.Text.ToString().Trim());
                 }
                 if (vivienda.Esta_vivienda == 2 || vivienda.Esta_vivienda == 1)
                 {
-                    vivienda.Pagaria_mesulaidad = Convert.ToInt32(tb_pagaria_mesualidad.Text.ToString().Trim());
+                    vivienda.Pagaria_mesulaidad = float.Parse(tb_pagaria_mesualidad.Text.ToString().Trim());
                   //  vivienda.Pagaria_mesulaidad = tb_pagaria_mesualidad.Text.ToString().Trim();
                 }
             }
             catch (FormatException ex)
             {
-                vivienda.Pagaria_mesulaidad = Convert.ToInt32(tb_pagaria_mesualidad.Text.ToString().Trim());
+            //    vivienda.Pagaria_mesulaidad = float.Parse(tb_pagaria_mesualidad.Text.ToString().Trim());
                 Console.WriteLine(ex.Message);
             }
 
@@ -184,6 +185,7 @@ namespace ENAHO
                 vivienda.Otro_origen_agua_consumo = tb_material__predominante_piso.Text.ToString().Trim();
                 Console.WriteLine(ex.Message);
             }
+
             vivienda.Sobre_pilotes = Convert.ToBoolean(rb_sobre_pilotes.SelectedValue.ToString());//sobre_pilotes
 
 
@@ -248,107 +250,15 @@ namespace ENAHO
                 vivienda.Otro_energia_cosina = tb_energia_cosinar.Text.ToString().Trim();
                 Console.WriteLine(ex.Message);
             }
-            /*basura*/
-            try
-            {
-                vivienda.Eliminacion_basura = Convert.ToInt16(rb_eliminar_basura.SelectedValue.ToString());
-            }
-            catch (FormatException ex)
-            {
-                vivienda.Otro_eliminacion_basura = tb_eliminar_basura.Text.ToString().Trim();
-                Console.WriteLine(ex.Message);
-              
-            }
-            /*separacion*/
-            vivienda.Separacion_organica = Convert.ToBoolean(rb_separacion_organica.SelectedValue.ToString());
-
-            vivienda.Separacion_plastico = Convert.ToBoolean(rb_separacion_plastico.SelectedValue.ToString());
-            vivienda.Separacion_vidrio = Convert.ToBoolean(rb_separacion_vidrio.SelectedValue.ToString());
-            vivienda.Separacion_alumino = Convert.ToBoolean(rb_separacion_alminio.SelectedValue.ToString());
-            vivienda.Separacion_papel = Convert.ToBoolean(rb_separacion_papel.SelectedValue.ToString());
-            /*hay en la vivienda*/
-
-            if (rb_telefono_celular.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_telefono_celular = Convert.ToInt32( tb_cantidad_telefonos.Text.ToString().Trim());
-            }
-
-            if (rb_telefono_recidencia.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_telefono_recidencial = Convert.ToInt32(tb_telefono_recidencia_cantidad.Text.ToString().Trim());
-            }
-            if (rb_pc_portatil.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_portatil = Convert.ToInt32( tb_pc_portatil_cantidad.Text.ToString().Trim());
-            }
-
-            if (rb_pc_escritorio.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_pc_escritorio = Convert.ToInt32(tb_pc_escritorio_cantidad.Text.ToString().Trim());
-            }
-            if (rb_tableta.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_tablet = Convert.ToInt32(tb_tableta_cantidad.Text.ToString().Trim());
-            }
-
-            if (rb_fax.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_fax = Convert.ToInt32(tb_fax_cantidad.Text.ToString().Trim());
-            }
-            if (rb_radio.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_radio = Convert.ToInt32(tb_radio_cantidad.Text.ToString().Trim());
-            }
-
-            if (rb_carro.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_carro = Convert.ToInt32(tb_carro_cantidad.Text.ToString().Trim());
-            }
-            if (rb_moto.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_moto = Convert.ToInt32(tb_moto_cantidad.Text.ToString().Trim());
-            }
-
-            if (rb_tv.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_tv_plasma = Convert.ToInt32(tb_tv_cantidad.Text.ToString().Trim());
-            }
 
 
-            if (rb_tv_convencional.SelectedValue.ToString() == "true")
-            {
-                vivienda.Cantidad_tv_convencional = Convert.ToInt32(tb_tv_convencional_cantidad.Text.ToString().Trim());
-            }
-
-            vivienda.Refrigeradora = Convert.ToBoolean(rb_refrigeradora.SelectedValue.ToString());
-            vivienda.Agua_caliente = Convert.ToBoolean(rb_agua_caliente.SelectedValue.ToString());
-            vivienda.Agua_tanque = Convert.ToBoolean(rb_tanque_agua.SelectedValue.ToString());
-            vivienda.Cable = Convert.ToBoolean(rb_televisor_cable.SelectedValue.ToString());
-            vivienda.Satelital = Convert.ToBoolean(rb_satelital.SelectedValue.ToString());
-
-            if (Convert.ToBoolean(rb_otro_tipo_paga.SelectedValue.ToString()))
-            {
-                vivienda.Otro_tv_paga = tb_otro_tv_paga.Text.ToString().Trim();
-            }
-            vivienda.Internet = Convert.ToBoolean(rb_internet.SelectedValue.ToString());
-            if (vivienda.Internet == true)
-            {
-                try
-                {
-                    vivienda.Tipo_coneccion = Convert.ToInt16(rb_tipo_coneccion.SelectedValue.ToString());
-                }
-                catch (FormatException exe)
-                {
-                    vivienda.Otro_tipo_coneccion = tb_otro_tipo_coneccion.Text.ToString().Trim();
-                    Console.WriteLine(exe.Message);
-                }
-                vivienda.Router = Convert.ToBoolean(rb_router.SelectedValue.ToString());
-            }
-
-
-            Application["idVivienda"]  = new DataVivienda().InsertarVivienda(vivienda)+"";
+            Application["idVivienda"]  = new DataVivienda().InsertarVivienda(vivienda, (Session["Login"] as Usuario).Id) + "";
             return true;
         }
+
+
+
+
         public bool ValidarCampos()
 
         {
@@ -359,7 +269,9 @@ namespace ENAHO
             bool validos = true;
 
             if (tb_direccion.Text.ToString().Trim().Equals("") ||
-                tb_telefono.Text.ToString().Trim().Equals("") ||
+                tb_telefono.Text.ToString().Trim().Equals("") || 
+                tb_telefono.Text.ToString().Trim().Length == 8   ||
+
                 tb_cantidad_personas_vivienda.Text.ToString().Trim().Equals("") ||
                 tb_cuartos_dormir.Text.ToString().Trim().Equals("") ||
                 tb_aposentos.Text.ToString().Trim().Equals("")
@@ -388,9 +300,11 @@ namespace ENAHO
 
             }
 
-            /* rb_mgch
 
-                 rb_cielo_raso
+            /*
+            rb_mgch;
+
+            rb_cielo_raso;
                  rb_sobre_pilotes
                  rb_estado_paredes
                  rb_estado_techo
@@ -410,11 +324,9 @@ namespace ENAHO
                  rb_refrigeradora
                  agua_caliente
                  rb_tanque_agua
-                 rb_televisor_cable
-                 rb_satelital
-                 rb_otro_tipo_paga
-
-             */
+W
+*/
+             
 
             if (rb_mismo_prespuesto.SelectedValue.ToString().Equals("false"))
             {
@@ -551,159 +463,17 @@ namespace ENAHO
                 }
             }
 
-            if (rb_eliminar_basura.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_eliminar_basura.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-
-            if (rb_telefono_celular.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_cantidad_telefonos.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-            /////////////////////
-            if (rb_telefono_recidencia.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_telefono_recidencia_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-
-
-            if (rb_pc_portatil.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_pc_portatil_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-            if (rb_pc_escritorio.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_cantidad_telefonos.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-            if (rb_tableta.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_tableta_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-            if (rb_fax.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_fax_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-
-
-            if (rb_radio.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_radio_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-            if (rb_carro.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_carro_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-            if (rb_moto.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_moto_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-
-            if (rb_tv.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_tv_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-
-
-            if (rb_tv_convencional.SelectedValue.ToString().Equals("true"))
-            {
-                if (tb_tv_convencional_cantidad.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                    validos = false;
-                    return validos;
-                }
-            }
-
-
-
-            if (rb_internet.SelectedValue.ToString().Equals("true"))
-            {
-                if (rb_tipo_coneccion.SelectedValue.ToString().Equals("OTRO"))
-                {
-                    if (tb_otro_tipo_coneccion.Text.ToString().Trim().Equals(""))
-                    {
-                        Console.WriteLine("falta energia cosinar");
-                        validos = false;
-                        return validos;
-                    }
-                }
-                if (tb_empresa_internet.Text.ToString().Trim().Equals(""))
-                {
-                    Console.WriteLine("falta energia cosinar");
-                }
-                if (rb_router.SelectedValue.ToString().Equals("true"))
-                {
-                }
-            }
             //script+="');";
      //       ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
             return validos;
 
         }
+
+        protected void rb_tipo_vivienda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+    
     }
 }

@@ -15,7 +15,7 @@ namespace ENAHO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Application["vivienda"] = new Vivienda();
             RefrescarGrid(new DataVivienda().ListadoVivienda());
            // ToDataTable(new DataVivienda().ListadoVivienda());
         }
@@ -77,5 +77,32 @@ namespace ENAHO
           //  (gb_list_viviendas.DataSource  )= dt;
             //  gb_list_viviendas.DataBind();
         }
+
+        protected void gb_list_viviendas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valor = gb_list_viviendas.SelectedRow.Cells[2].Text;
+
+
+            Application["vivienda"] =  new DataVivienda().getVivienda( Convert.ToInt32(gb_list_viviendas.SelectedRow.Cells[2].Text));
+            Response.Redirect("modificarvivienda.aspx");
+            Console.WriteLine(valor);
+
+            string script = "alert('"+ valor + "')"; 
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+        }
+        
+        protected void gb_list_viviendas_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+            int index = Convert.ToInt32(e.RowIndex);
+            string valor = gb_list_viviendas.Rows[index].Cells[2].Text;
+            new DataVivienda().eliminar(Convert.ToInt32(gb_list_viviendas.Rows[index].Cells[2].Text));
+            Console.WriteLine(valor);
+            string script = "alert('eliminando " + valor + "')";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, true);
+            Response.Redirect("listvivienda.aspx");
+        }
+
+  
     }
 }

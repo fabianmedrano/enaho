@@ -8,6 +8,8 @@ namespace Entidad
 {
     public class Usuario
     {
+
+        private int id;
         private string user;
         private string pass;
 
@@ -17,12 +19,15 @@ namespace Entidad
             this.Pass = string.Empty;
         }
 
-        public Usuario(string user, string pass)
+        public Usuario(string user, string pass, int id)
         {
+
+            this.Id = id;
             this.User = user;
             this.Pass = pass;
         }
 
+        public int Id { get => id; set => id = value; }
         public string User { get => user; set => user = value; }
         public string Pass { get => pass; set => pass = value; }
 

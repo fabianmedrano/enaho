@@ -21,9 +21,7 @@ namespace Datos
                 command.CommandText = "paInsertHogar";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Clear();
-
-  
-
+            
                 command.Parameters.Add(new SqlParameter("@id_vivienda", idvivienda));
 
                 command.Parameters.Add(new SqlParameter("@Personas_mas_seis_meses", hogar.Personas_mas_seis_meses));
@@ -50,14 +48,10 @@ namespace Datos
 
                 command.Connection.Open();
                 SqlDataReader RESULTADO = command.ExecuteReader();
-                /////////////////////////////////
-
                 while (RESULTADO.Read())
                 {
                     idHogar = Convert.ToInt32(RESULTADO["id"].ToString());
-
                 }
-               
             }
             catch (Exception ex)
             {
@@ -75,8 +69,131 @@ namespace Datos
             return idHogar;
         }
 
+        public void modificarHogar(Hogar hogar, int id)
+        {
+            SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
+            try
+            {
+                command.CommandText = "paEditHogar";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.Add(new SqlParameter("@id", id));
+
+                command.Parameters.Add(new SqlParameter("@Personas_mas_seis_meses", hogar.Personas_mas_seis_meses));
+                command.Parameters.Add(new SqlParameter("@Personas_otro_lugar_donde_vivir", hogar.Personas_otro_lugar_donde_vivir));
+
+                command.Parameters.Add(new SqlParameter("@Cantidad_personas_otro_lugar", hogar.Cantidad_personas_otro_lugar));
+                command.Parameters.Add(new SqlParameter("@Personas_otra_partes", hogar.Personas_otra_partes));
+
+                command.Parameters.Add(new SqlParameter("@Personas_asentes_menos_seis_meses", hogar.Personas_asentes_menos_seis_meses));
+                command.Parameters.Add(new SqlParameter("@numero_personas_asentes_menos_seis_meses", hogar.Numero_personas_asentes_menos_seis_meses));
+
+                command.Parameters.Add(new SqlParameter("@Servicio_domestico_en_casa", hogar.Servicio_domestico_en_casa));
+
+                command.Parameters.Add(new SqlParameter("@Alquila_cuarto", hogar.Alquila_cuarto));
+                command.Parameters.Add(new SqlParameter("@Numero_personas_alquila_cuarto", hogar.Numero_personas_alquila_cuarto));
+                command.Parameters.Add(new SqlParameter("@Recibio_bono", hogar.Recibio_bono));
+                command.Parameters.Add(new SqlParameter("@Ano_recibir", hogar.Ano_recibir));
+                command.Parameters.Add(new SqlParameter("@Tipo_bono", hogar.Tipo_bono));
+                command.Parameters.Add(new SqlParameter("@Solocitud_bono", hogar.Solocitud_bono));
+                command.Parameters.Add(new SqlParameter("@Razon_no_recibir", hogar.Razon_no_recibir));
+                command.Parameters.Add(new SqlParameter("@Otro_razon_no_recibir ", hogar.Otro_razon_no_recibir));
+                command.Parameters.Add(new SqlParameter("@Razon_no_solicitar", hogar.Razon_no_solicitar));
+                command.Parameters.Add(new SqlParameter("@Otro_razon_no_solicitar", hogar.Otro_razon_no_solicitar));
+
+                command.Connection.Open();
+                SqlDataReader RESULTADO = command.ExecuteReader();
+              
+            }
+            catch (Exception ex)
+            {
+                // return false;
+                throw ex;
+            }
+            finally
+            {
+                if (command.Connection.State == System.Data.ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+                command.Dispose();
+            }
+        }
+
+        public Boolean eliminar(int id)
+        {
+            List<viviendamuestra> LISTA = new List<viviendamuestra>();
+            SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
+            command.CommandText = "paEliminarHogar";
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add(new SqlParameter("@id", id));
+            try
+            {
+                command.Connection.Open();
+                command.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (command.Connection.State == System.Data.ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+                command.Dispose();
+            }
+            return true;
+        }
 
 
+        public List<hogarmuestra> ListadoHogar(int idvivienda)
+        {
+            
+                List<hogarmuestra> LISTA = new List<hogarmuestra>();
+                SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
+                command.CommandText = "paSeleccionahogar";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+
+                command.Parameters.Add(new SqlParameter("@id", idvivienda));
+
+            try
+            {
+                    command.Connection.Open();
+                    SqlDataReader RESULTADO = command.ExecuteReader();
+
+                    while (RESULTADO.Read())
+                    {
+                    hogarmuestra c = new hogarmuestra();
+
+                        c.Id = Convert.ToInt16(RESULTADO["id"]);
+                        c.Personas_mas_seis_meses = Convert.ToBoolean(RESULTADO["Personas_mas_seis_meses"]);
+                        c.Cantidad_personas_otro_lugar = Convert.ToInt32(RESULTADO["Cantidad_personas_otro_lugar"]);
+                        c.Numero_personas_asentes_menos_seis_meses = Convert.ToInt32(RESULTADO["numero_personas_asentes_menos_seis_meses"]);
+                      
+                        LISTA.Add(c);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    if (command.Connection.State == System.Data.ConnectionState.Open)
+                    {
+                        command.Connection.Close();
+                    }
+                    command.Dispose();
+                }
+                return LISTA;
+            
+
+        }
 
         public  Boolean insertarHogares(List<Hogar> hogares, int idvivienda  )
         {
@@ -159,9 +276,73 @@ namespace Datos
             }
         }
 
-     
+       
+        public Hogar getHogar(int id)
+        {
+
+        Hogar hogar = new Hogar();
+            
+
+            SqlCommand command = Conexion.GET_CONEXION().CreateCommand();
+            command.CommandText = "paGetHogar";
+            command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.Add(new SqlParameter("@id", id));
+
+            try
+            {
+                command.Connection.Open();
+                SqlDataReader RESULTADO = command.ExecuteReader();
 
 
+                while (RESULTADO.Read())
+                {
+                    hogar.Id =Convert.ToInt32((RESULTADO["id"]).ToString());
+                    hogar.Personas_mas_seis_meses = Convert.ToBoolean((RESULTADO["Personas_mas_seis_meses"]).ToString());
+                    hogar.Personas_otro_lugar_donde_vivir = Convert.ToBoolean((RESULTADO["Personas_otro_lugar_donde_vivir"]).ToString());
+                    hogar.Cantidad_personas_otro_lugar = Convert.ToInt32((RESULTADO["Cantidad_personas_otro_lugar"]).ToString());
 
+                    hogar.Personas_otra_partes = Convert.ToBoolean((RESULTADO["Personas_otra_partes"]).ToString());
+                    hogar.Personas_asentes_menos_seis_meses = Convert.ToBoolean((RESULTADO["Personas_asentes_menos_seis_meses"]).ToString());
+                    hogar.Numero_personas_asentes_menos_seis_meses = Convert.ToInt32((RESULTADO["numero_personas_asentes_menos_seis_meses"]).ToString());
+
+
+                    hogar.Servicio_domestico_en_casa = Convert.ToBoolean((RESULTADO["Servicio_domestico_en_casa"]).ToString());
+                    hogar.Alquila_cuarto = Convert.ToBoolean((RESULTADO["Alquila_cuarto"]).ToString());
+                    hogar.Numero_personas_alquila_cuarto = Convert.ToInt32((RESULTADO["Numero_personas_alquila_cuarto"]).ToString());
+
+                    //boono de vivienda
+
+                    hogar.Recibio_bono = Convert.ToBoolean((RESULTADO["Recibio_bono"]).ToString());
+                    hogar.Ano_recibir = Convert.ToInt32((RESULTADO["Ano_recibir"]).ToString());
+                    hogar.Tipo_bono = Convert.ToInt32((RESULTADO["Tipo_bono"]).ToString());
+
+                    hogar.Solocitud_bono = Convert.ToBoolean((RESULTADO["Solocitud_bono"]).ToString());
+                    hogar.Razon_no_recibir = Convert.ToInt32((RESULTADO["Razon_no_recibir"]).ToString());
+                  //  hogar.Otro_razon_no_recibir = ((RESULTADO["idDistrito"]).ToString());
+
+                    hogar.Razon_no_solicitar = Convert.ToInt32((RESULTADO["Razon_no_solicitar"]).ToString());
+                   // hogar.Otro_razon_no_solicitar = ((RESULTADO["idDistrito"]).ToString());
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (command.Connection.State == System.Data.ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+                command.Dispose();
+            }
+
+            return hogar;
+        }
+        
     }
 }    

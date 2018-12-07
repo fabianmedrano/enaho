@@ -17,8 +17,8 @@ namespace Entidad
         private Int16 numero_hogares_vivienda;
         private Int16 tipo_vivienda;
         private string otro_tipo_vivienda;
-        private int mesulaidad_vivienda;
-        private int pagaria_mesulaidad;
+        private float mesulaidad_vivienda;
+        private float pagaria_mesulaidad;
         /**/
         private Int16 esta_vivienda;
         private string otro_esta_vivienda;
@@ -74,7 +74,7 @@ namespace Entidad
         private Int16 eliminacion_basura;
         private string otro_eliminacion_basura;
         /*separacion basura*/
-
+        /*hasta aqui
         private Boolean separacion_organica;
         private Boolean separacion_plastico;
         private Boolean separacion_vidrio;
@@ -82,7 +82,6 @@ namespace Entidad
         private Boolean separacion_papel;
 
 
-        /*hay en la vivienda*/
         
         private int cantidad_telefono_celular;
         private int cantidad_telefono_recidencial;
@@ -109,7 +108,7 @@ namespace Entidad
         private string otro_tipo_coneccion;
 
         private Boolean router;
-
+        */
     public Vivienda()
         {
         id_vivienda=0;
@@ -177,42 +176,6 @@ namespace Entidad
 
         eliminacion_basura = 0;
         otro_eliminacion_basura = "nada";
-        /*separacion basura*/
-
-        separacion_organica = false;
-        separacion_plastico = false;
-        separacion_vidrio = false;
-        separacion_alumino = false;
-        separacion_papel = false;
-
-
-        /*hay en la vivienda*/
-
-        cantidad_telefono_celular =0;
-        cantidad_telefono_recidencial = 0;
-            cantidad_portatil = 0;
-            cantidad_pc_escritorio = 0;
-            cantidad_tablet = 0;
-            cantidad_fax = 0;
-            cantidad_radio = 0;
-            cantidad_carro = 0;
-            cantidad_moto = 0;
-            cantidad_tv_plasma = 0;
-            cantidad_tv_convencional = 0;
-
-            refrigeradora = false;
-        agua_caliente = false;
-        agua_tanque = false;
-        cable = false;
-        satelital = false;
-        otro_tv_paga = "nada";
-        internet = false;
-
-
-        tipo_coneccion = 0;
-        otro_tipo_coneccion = "nada";
-
-        router = false;
 
      }
 
@@ -225,8 +188,8 @@ namespace Entidad
         public short Numero_hogares_vivienda { get => numero_hogares_vivienda; set => numero_hogares_vivienda = value; }
         public short Tipo_vivienda { get => tipo_vivienda; set => tipo_vivienda = value; }
         public string Otro_tipo_vivienda { get => otro_tipo_vivienda; set => otro_tipo_vivienda = value; }
-        public int Mesulaidad_vivienda { get => mesulaidad_vivienda; set => mesulaidad_vivienda = value; }
-        public int Pagaria_mesulaidad { get => pagaria_mesulaidad; set => pagaria_mesulaidad = value; }
+        public float Mesulaidad_vivienda { get => mesulaidad_vivienda; set => mesulaidad_vivienda = value; }
+        public float Pagaria_mesulaidad { get => pagaria_mesulaidad; set => pagaria_mesulaidad = value; }
         public short Esta_vivienda { get => esta_vivienda; set => esta_vivienda = value; }
         public string Otro_esta_vivienda { get => otro_esta_vivienda; set => otro_esta_vivienda = value; }
         public short Material_paredes { get => material_paredes; set => material_paredes = value; }
@@ -258,31 +221,7 @@ namespace Entidad
         public string Otro_energia_cosina { get => otro_energia_cosina; set => otro_energia_cosina = value; }
         public short Eliminacion_basura { get => eliminacion_basura; set => eliminacion_basura = value; }
         public string Otro_eliminacion_basura { get => otro_eliminacion_basura; set => otro_eliminacion_basura = value; }
-        public bool Separacion_organica { get => separacion_organica; set => separacion_organica = value; }
-        public bool Separacion_plastico { get => separacion_plastico; set => separacion_plastico = value; }
-        public bool Separacion_vidrio { get => separacion_vidrio; set => separacion_vidrio = value; }
-        public bool Separacion_alumino { get => separacion_alumino; set => separacion_alumino = value; }
-        public bool Separacion_papel { get => separacion_papel; set => separacion_papel = value; }
-        public int Cantidad_telefono_celular { get => cantidad_telefono_celular; set => cantidad_telefono_celular = value; }
-        public int Cantidad_telefono_recidencial { get => cantidad_telefono_recidencial; set => cantidad_telefono_recidencial = value; }
-        public int Cantidad_portatil { get => cantidad_portatil; set => cantidad_portatil = value; }
-        public int Cantidad_pc_escritorio { get => cantidad_pc_escritorio; set => cantidad_pc_escritorio = value; }
-        public int Cantidad_tablet { get => cantidad_tablet; set => cantidad_tablet = value; }
-        public int Cantidad_fax { get => cantidad_fax; set => cantidad_fax = value; }
-        public int Cantidad_radio { get => cantidad_radio; set => cantidad_radio = value; }
-        public int Cantidad_carro { get => cantidad_carro; set => cantidad_carro = value; }
-        public int Cantidad_moto { get => cantidad_moto; set => cantidad_moto = value; }
-        public int Cantidad_tv_plasma { get => cantidad_tv_plasma; set => cantidad_tv_plasma = value; }
-        public int Cantidad_tv_convencional { get => cantidad_tv_convencional; set => cantidad_tv_convencional = value; }
-        public bool Refrigeradora { get => refrigeradora; set => refrigeradora = value; }
-        public bool Agua_caliente { get => agua_caliente; set => agua_caliente = value; }
-        public bool Agua_tanque { get => agua_tanque; set => agua_tanque = value; }
-        public bool Cable { get => cable; set => cable = value; }
-        public bool Satelital { get => satelital; set => satelital = value; }
-        public string Otro_tv_paga { get => otro_tv_paga; set => otro_tv_paga = value; }
-        public bool Internet { get => internet; set => internet = value; }
-        public short Tipo_coneccion { get => tipo_coneccion; set => tipo_coneccion = value; }
-        public string Otro_tipo_coneccion { get => otro_tipo_coneccion; set => otro_tipo_coneccion = value; }
-        public bool Router { get => router; set => router = value; }
+
+
     }
 }

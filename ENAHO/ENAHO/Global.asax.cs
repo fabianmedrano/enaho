@@ -17,6 +17,8 @@ namespace ENAHO
 
             Application["idVivienda"] = 0+"" ;
             Application["idhogar"] = 0 + "";
+            Application["vivienda"] = new Vivienda();
+            Application["hogar"] = new Hogar();
             // List<Hogar> hogares = new List<Hogar>();
             Application["PersonasHogar"] = new List<Persona>();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
