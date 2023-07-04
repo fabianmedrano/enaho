@@ -1,0 +1,109 @@
+﻿body {
+    background-color: #337ab7;
+    
+    font-family: monospace;
+    /*opacity: 0.5;*/
+}
+
+
+
+.center-block {
+    float: none;
+    margin-top: 20px;
+}
+.row {
+    margin-bottom:5px;
+}
+.right {
+    float:right;
+}
+
+.left {
+    float:left;
+}
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #286090;
+    border-radius: inherit;
+    color: white;
+    margin-top: 0px;
+}
+
+.panel {
+    background-color: none;
+    border-color: #286090;
+    border-radius: initial;
+    /*margin-top: 20px;*/
+}
+
+.form-control {
+    height: 20px;
+    border-radius: initial;
+}
+
+.DDL {
+    height:29px;
+}
+
+.box {
+    border-style:solid;
+    border-width:1px;
+    border-color:darkgray;
+    border-collapse:collapse;
+    margin-bottom:0;
+    margin-top:0;
+    padding-bottom:5px;
+    padding-top:5px;
+    height:97px;
+}
+hr {
+    border-style: solid;
+   
+    border-color: darkgray;
+}
+
+.btn {
+    background-color: #335c80;
+    border-color: #2469a5;
+    border-radius: initial;
+
+}
+
+.panel .panel-footer {
+    padding-bottom:10px;
+    padding-top:10px;
+}
+
+
+
+
+table {
+    width: 100%;
+}
+
+th, td {
+    width: auto;
+}
+
+
+#Modalpersonas {
+    overflow-x: scroll;
+    width: auto;
+    overflow-y: scroll;
+    /* 
+         
+   
+    margin:initial;
+    padding:initial;
+
+    */
+}
+
+
+#btn_lista_hogares {
+   border:inherit;
+   width:inherit;
+   color:inherit;
+   background-color:inherit;
+}

@@ -1,0 +1,6 @@
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Logica\bin\Debug\Logica.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Logica\bin\Debug\Logica.pdb
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Logica\obj\Debug\Logica.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Logica\obj\Debug\Logica.pdb

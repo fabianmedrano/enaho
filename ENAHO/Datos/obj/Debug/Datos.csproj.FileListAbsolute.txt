@@ -1,0 +1,9 @@
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\bin\Debug\Datos.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\bin\Debug\Datos.pdb
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\bin\Debug\Entidad.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\bin\Debug\Entidad.pdb
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\obj\Debug\Datos.dll
+C:\Users\fabian\Documents\Ucr\ENAHO\ENAHO\Datos\obj\Debug\Datos.pdb
